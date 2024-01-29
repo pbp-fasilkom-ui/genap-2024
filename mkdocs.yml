@@ -58,3 +58,5 @@ markdown_extensions:
 nav:
   - Beranda:
     - index.md
+  - Tutorial:
+    - Tutorial 0: tutorial/tutorial-0.md
