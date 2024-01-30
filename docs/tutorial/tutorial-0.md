@@ -40,21 +40,31 @@ Dengan pemahaman dasar mengenai Git dan GitHub, kamu siap untuk melangkah lebih 
 Langkah selanjutnya adalah membuat akun di GitHub, yang akan memungkinkanmu untuk mulai berkolaborasi pada proyek-proyek menggunakan Git.
 
 1. Buka Situs Web GitHub
+
+
    - Buka peramban web dan akses [GitHub].
 
 2. Membuat Akun
+
+
    - Di halaman beranda GitHub, cari tombol **`Sign up`** di pojok kanan atas halaman.
    - Klik tombol tersebut untuk memulai proses pendaftaran akun.
 
 3. Isi Formulir Pendaftaran
+
+
    - Isi formulir pendaftaran dengan informasi yang diperlukan, seperti nama pengguna yang ingin digunakan, alamat _email_ yang valid, dan kata sandi yang aman.
    - Pastikan kamu menyimpan informasi ini dengan aman untuk masuk ke akunmu di masa mendatang.
 
 4. Verifikasi Akun Melalui _Email_
+
+
    - Setelah mengisi formulir, GitHub akan mengirimkan _email_ verifikasi ke alamat _email_ yang kamu berikan.
    - Buka _email_ tersebut dan ikuti instruksi untuk verifikasi akunmu.
 
 5. Akun GitHub Siap Digunakan
+
+
    - Setelah verifikasi selesai, kamu akan memiliki akun GitHub yang siap digunakan untuk berkolaborasi dalam proyek dan melacak perubahan menggunakan Git.
 
 **Catatan:**
@@ -158,13 +168,19 @@ Langkah pertama dalam penggunaan Git adalah melakukan inisiasi repositori di Git
 1. Buka [GitHub] melalui peramban web.
 
 2. Buat Repositori Baru
+
+
    - Pada halaman beranda GitHub, buat repositori baru dengan nama `my-first-repo`.
    - Buka halaman repositori yang baru kamu buat. Pastikan untuk mengatur visibilitas proyek sebagai "Public" dan biarkan pengaturan lainnya pada nilai _default_.
 
 3. Tentukan Direktori Lokal
+
+
    - Pilih direktori lokal di komputermu yang telah diinisiasi dengan Git. Inilah tempat kamu akan menyimpan versi lokal dari proyek.
 
 4. Tambahkan Berkas `README.md`
+
+
    - Buat berkas baru dengan nama `README.md` dalam direktori lokal proyekmu.
    - Isi berkas `README.md` dengan informasi seperti nama, NPM, dan kelas. Contoh:
 
@@ -177,10 +193,12 @@ Langkah pertama dalam penggunaan Git adalah melakukan inisiasi repositori di Git
      ```
 
 5. Cek Status dan Lakukan _Tracking_
+
    - Buka _command prompt_ atau terminal, lalu jalankan `git status` pada direktori yang sudah kamu pilih. Perintah ini akan menampilkan berkas-berkas yang belum di-_track_ (_untracked_).
    - Gunakan perintah `git add README.md` untuk menandai berkas README.md sebagai berkas yang akan di-_commit_ (_tracked_).
 
 6. _Commit_ Perubahan
+
    - Jalankan kembali `git status` dan pastikan berkas README.md sudah ditandai sebagai berkas yang akan di-_commit_.
    - Lanjutkan dengan menjalankan `git commit -m "<KOMENTAR KAMU>"` untuk membuat _commit_ dengan pesan komentar yang sesuai dengan perubahan yang kamu lakukan.
 
