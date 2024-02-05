@@ -1,0 +1,1407 @@
+
+<!doctype html>
+<html lang="id" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Situs Web Pemrograman Berbasis Platform Genap 2023/2024">
+      
+      
+        <meta name="author" content="PBP Fasilkom UI">
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/img/logo.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.7">
+    
+    
+      
+        <title>Tutorial 1: Pengenalan Aplikasi Django dan Model-View-Template (MVT) pada Django - PBP Genap 2023/2024</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f2e4d321.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+    <meta name="google-site-verification" content="VRNmwVzPf-m-7Gq2QtPDhYWbUIkjyenlNJLT33MQMZE" />
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tutorial-1-pengenalan-aplikasi-django-dan-model-view-template-mvt-pada-django" class="md-skip">
+          Lewati ke isi
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="PBP Genap 2023/2024" class="md-header__button md-logo" aria-label="PBP Genap 2023/2024" data-md-component="logo">
+      
+  <img src="../../assets/img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PBP Genap 2023/2024
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tutorial 1: Pengenalan Aplikasi Django dan Model-View-Template (MVT) pada Django
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-orange"  aria-label="Beralih ke mode gelap"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Beralih ke mode gelap" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="deep-orange"  aria-label="Beralih ke mode terang"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Beralih ke mode terang" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cari" placeholder="Cari" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cari">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Kosongkan" aria-label="Kosongkan" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Mempersiapkan pencarian
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tab" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+    
+  
+  Beranda
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../tutorial-0/" class="md-tabs__link">
+          
+  
+    
+  
+  Tutorial
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tugas/tugas-1/" class="md-tabs__link">
+          
+  
+    
+  
+  Tugas
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigasi" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="PBP Genap 2023/2024" class="md-nav__button md-logo" aria-label="PBP Genap 2023/2024" data-md-component="logo">
+      
+  <img src="../../assets/img/logo.png" alt="logo">
+
+    </a>
+    PBP Genap 2023/2024
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Beranda
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Beranda
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Tutorial
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorial
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial-0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tutorial 0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Tugas
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Tugas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tugas/tugas-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tugas 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Daftar isi">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Daftar isi
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tujuan-pembelajaran" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tujuan Pembelajaran
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ringkasan-hasil-tutorial-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ringkasan Hasil Tutorial 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pengenalan-mengenai-konsep-mvt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pengenalan Mengenai Konsep MVT
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pengenalan Mengenai Konsep MVT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apa-itu-konsep-mvt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apa Itu Konsep MVT?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apa-itu-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apa Itu Model?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apa-itu-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apa Itu View?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apa-itu-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apa Itu Template?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hubungan-antara-komponen-komponen-mvt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hubungan Antara Komponen-komponen MVT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manfaat-mvt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manfaat MVT
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-membuat-aplikasi-django-beserta-konfigurasi-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tutorial: Membuat Aplikasi Django beserta Konfigurasi Model
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tutorial: Membuat Aplikasi Django beserta Konfigurasi Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#langkah-1-persiapan-awal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Langkah 1: Persiapan Awal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#langkah-2-membuat-aplikasi-main-dalam-proyek-book-tracker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Langkah 2: Membuat Aplikasi main dalam Proyek Book Tracker
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-implementasi-template-dasar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tutorial: Implementasi Template Dasar
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tutorial: Implementasi Template Dasar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#langkah-1-membuat-dan-mengisi-berkas-mainhtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Langkah 1: Membuat dan Mengisi Berkas main.html
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-implementasi-model-dasar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tutorial: Implementasi Model Dasar
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tutorial: Implementasi Model Dasar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#langkah-1-mengubah-berkas-modelspy-dalam-aplikasi-main" class="md-nav__link">
+    <span class="md-ellipsis">
+      Langkah 1: Mengubah Berkas models.py dalam Aplikasi main
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#langkah-2-membuat-dan-mengaplikasikan-migrasi-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Langkah 2: Membuat dan Mengaplikasikan Migrasi Model
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-menghubungkan-view-dengan-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tutorial: Menghubungkan View dengan Template
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tutorial: Menghubungkan View dengan Template">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#langkah-1-mengintegrasikan-komponen-mvt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Langkah 1: Mengintegrasikan Komponen MVT
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#langkah-2-modifikasi-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Langkah 2: Modifikasi Template
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-mengonfigurasi-routing-url" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tutorial: Mengonfigurasi Routing URL
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tutorial: Mengonfigurasi Routing URL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#langkah-1-mengonfigurasi-routing-url-aplikasi-main" class="md-nav__link">
+    <span class="md-ellipsis">
+      Langkah 1: Mengonfigurasi Routing URL Aplikasi main
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#langkah-2-mengonfigurasi-routing-url-proyek" class="md-nav__link">
+    <span class="md-ellipsis">
+      Langkah 2: Mengonfigurasi Routing URL Proyek
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apa-bedanya-urlspy-pada-aplikasi-dan-urlspy-pada-proyek" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apa bedanya urls.py pada aplikasi dan urls.py pada proyek?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-pengenalan-django-unit-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tutorial: Pengenalan Django Unit Testing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tutorial: Pengenalan Django Unit Testing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#langkah-1-membuat-unit-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      Langkah 1: Membuat Unit Test
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#langkah-2-menjalankan-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      Langkah 2: Menjalankan Test
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#penutup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Penutup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referensi-tambahan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referensi Tambahan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kontributor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kontributor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Credits
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="tutorial-1-pengenalan-aplikasi-django-dan-model-view-template-mvt-pada-django">Tutorial 1: Pengenalan Aplikasi Django dan <em>Model-View-Template</em> (MVT) pada Django</h1>
+<p>Pemrograman Berbasis Platform (CSGE602022) — diselenggarakan oleh Fakultas Ilmu Komputer Universitas Indonesia, Semester Genap 2023/2024</p>
+<hr />
+<h2 id="tujuan-pembelajaran">Tujuan Pembelajaran</h2>
+<p>Setelah menyelesaikan tutorial ini, mahasiswa diharapkan untuk dapat:</p>
+<ul>
+<li>Mengerti konsep MVT pada aplikasi Django</li>
+<li>Mengerti bagaimana alur Django menampilkan sebuah halaman HTML</li>
+<li>Mengerti konfigurasi <em>routing</em> yang ada pada <code>urls.py</code></li>
+<li>Memahami kaitan <em>models</em>, <em>views</em> dan <em>template</em> pada Django</li>
+<li>Memahami pembuatan <em>unit test</em> pada <em>framework</em> Django</li>
+</ul>
+<h2 id="ringkasan-hasil-tutorial-0">Ringkasan Hasil Tutorial 0</h2>
+<p>Untuk membantumu mengerjakan tutorial 1 dengan baik, kami mengharapkan hasil pengerjaan tutorial 0 sebagai berikut.</p>
+<ol>
+<li>Pada komputer lokal, terdapat direktori utama <code>book-tracker</code> yang telah diinisiasi sebagai repositori lokal.</li>
+<li>
+<p>Pada direktori utama <code>book-tracker</code> tersebut, terdapat beberapa berkas dan subdirektori berikut.</p>
+</li>
+<li>
+<p>Subdirektori <code>env</code>.</p>
+</li>
+<li>
+<p>Subdirektori proyek <code>book_tracker</code>. Berbeda dengan direktori utama, subdirektori ini terbentuk setelah menjalankan perintah</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>django-admin<span class="w"> </span>startproject<span class="w"> </span>book_tracker<span class="w"> </span>.
+</code></pre></div>
+</li>
+<li>
+<p>Berkas <code>.gitignore</code>.</p>
+</li>
+<li>Berkas <code>manage.py</code>.</li>
+<li>Berkas <code>requirements.txt</code>.</li>
+<li>(Opsional) Berkas <code>db.sqlite3</code>.</li>
+</ol>
+<p>Struktur proyek <code>book-tracker</code> pada direktori lokal adalah sebagai berikut.</p>
+<p><img alt="Struktur Direktori Lokal" src="https://media.discordapp.net/attachments/1133956580728127550/1203381902141296740/image.png?ex=65d0e3bb&amp;is=65be6ebb&amp;hm=200cc2f7bf3d40278be86246531d714577743507c2baee953ce89298423433da&amp;=&amp;format=webp&amp;quality=lossless" /></p>
+<ol>
+<li>
+<p>Pada repositori GitHub, pastikan repositori <code>book-tracker</code> memiliki berkas dan direktori berikut.</p>
+</li>
+<li>
+<p>Direktori proyek <code>book_tracker</code>. Direktori ini hasil menjalankan perintah</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>django-admin<span class="w"> </span>startproject<span class="w"> </span>book_tracker<span class="w"> </span>.
+</code></pre></div>
+</li>
+<li>
+<p>Berkas <code>.gitignore</code>.</p>
+</li>
+<li>Berkas <code>manage.py</code>.</li>
+<li>Berkas <code>requirements.txt</code>.</li>
+</ol>
+<p>Struktur proyek <code>book-tracker</code> pada repositori GitHub adalah sebagai berikut.</p>
+<p><img alt="Struktur Repositori Github" src="https://media.discordapp.net/attachments/1133956580728127550/1203382472805449789/image.png?ex=65d0e443&amp;is=65be6f43&amp;hm=286a1e40dd7bcd6e686a3cbc551315d3a6fa87ea4770cc25f90226fbede863e9&amp;=&amp;format=webp&amp;quality=lossless" /></p>
+<h2 id="pengenalan-mengenai-konsep-mvt">Pengenalan Mengenai Konsep MVT</h2>
+<p>Dalam dunia pengembangan web, terdapat berbagai konsep dan arsitektur yang membantu dalam merancang dan mengembangkan aplikasi. Salah satu konsep yang umum digunakan adalah MVT (<em>Model-View-Template</em>).</p>
+<h3 id="apa-itu-konsep-mvt">Apa Itu Konsep MVT?</h3>
+<p><img alt="MVT Diagram" src="https://cdn.discordapp.com/attachments/1142468662461214771/1146996248268775484/3._Python_Django_-_Modul_2_Page2_Image5.jpg" /></p>
+<p><strong>MVT</strong> adalah singkatan dari <strong><em>Model-View-Template</em></strong>. MVT adalah sebuah konsep arsitektur yang digunakan dalam pengembangan web untuk memisahkan komponen-komponen utama dari sebuah aplikasi. Konsep ini memungkinkan pengembang web untuk mengorganisasi dan mengelola kode dengan lebih terstruktur.</p>
+<h3 id="apa-itu-model">Apa Itu Model?</h3>
+<p><strong><em>Model</em></strong> merupakan komponen dalam konsep MVT yang bertanggung jawab untuk mengatur dan mengelola data dari aplikasi. Model mewakili struktur data dan logika aplikasi yang berada di belakang tampilan. Model menghubungkan aplikasi dengan basis data dan mengatur interaksi dengan data tersebut.</p>
+<h3 id="apa-itu-view">Apa Itu <em>View</em>?</h3>
+<p><strong><em>View</em></strong> merupakan komponen yang menangani logika presentasi dalam konsep MVT. <em>View</em> mengontrol bagaimana data yang dikelola oleh model akan ditampilkan kepada pengguna. Dalam konteks MVT, <em>view</em> berperan sebagai pengatur tampilan dan mengambil data dari model untuk disajikan kepada pengguna.</p>
+<h3 id="apa-itu-template">Apa Itu <em>Template</em>?</h3>
+<p><strong><em>Template</em></strong> adalah komponen yang berfungsi untuk mengatur tampilan atau antarmuka pengguna. <em>Template</em> memisahkan kode HTML dari logika aplikasi. Dalam MVT, <em>template</em> digunakan untuk merancang tampilan yang akhirnya akan diisi dengan data dari model melalui <em>view</em>.</p>
+<h3 id="hubungan-antara-komponen-komponen-mvt">Hubungan Antara Komponen-komponen MVT</h3>
+<p>Secara ringkas, konsep MVT berjalan dalam kerangka berikut:</p>
+<ul>
+<li><strong><em>Model</em></strong>: Menyimpan data dan logika aplikasi.</li>
+<li><strong><em>View</em></strong>: Menampilkan data dari model dan menghubungkannya dengan <em>template</em>.</li>
+<li><strong><em>Template</em></strong>: Menentukan tampilan antarmuka pengguna.</li>
+</ul>
+<h3 id="manfaat-mvt">Manfaat MVT</h3>
+<ul>
+<li><strong>Pemisahan Tugas</strong></li>
+</ul>
+<p>MVT memisahkan tugas antara logika aplikasi, tampilan, dan data, sehingga memungkinkan pengembang untuk bekerja pada setiap komponen secara terpisah.</p>
+<ul>
+<li><strong>Kode yang Mudah Dikelola</strong></li>
+</ul>
+<p>Dengan pemisahan tugas yang jelas, kode menjadi lebih terorganisir dan mudah dikelola.</p>
+<ul>
+<li><strong>Penggunaan Kembali</strong></li>
+</ul>
+<p>Kode dapat digunakan kembali dalam berbagai bagian aplikasi yang berbeda.</p>
+<ul>
+<li><strong>Skalabilitas</strong></li>
+</ul>
+<p>Struktur MVT mendukung skalabilitas dengan memungkinkan pengembangan paralel pada setiap komponen.</p>
+<p><strong>Catatan:</strong></p>
+<ul>
+<li>Konsep MVT sangat terkait dengan <em>framework</em> Django dalam pengembangan web dengan bahasa pemrograman Python.</li>
+<li>Dalam praktiknya, pemahaman yang baik mengenai konsep MVT akan membantu kamu dalam merancang aplikasi web yang lebih terstruktur dan mudah dikelola.</li>
+</ul>
+<h2 id="tutorial-membuat-aplikasi-django-beserta-konfigurasi-model">Tutorial: Membuat Aplikasi Django beserta Konfigurasi Model</h2>
+<p>Dalam tutorial ini, akan dijelaskan mengenai konsep aplikasi dan proyek dalam Django.</p>
+<p><strong>Apa Itu Proyek dan Aplikasi dalam Django?</strong></p>
+<ul>
+<li>
+<p><strong>Proyek (<em>Project</em>)</strong> adalah keseluruhan proyek web yang kamu bangun dengan menggunakan Django. <strong>Proyek berisi berbagai aplikasi</strong> yang berfungsi secara bersama untuk menciptakan situs web atau aplikasi web yang lengkap.</p>
+</li>
+<li>
+<p><strong>Aplikasi (<em>Apps</em>)</strong> adalah unit modular yang melakukan tugas-tugas spesifik dalam suatu proyek Django. Setiap aplikasi dapat memiliki model, tampilan, <em>template</em>, dan URL yang terkait dengannya. Aplikasi memungkinkanmu untuk membagi fungsionalitas proyek menjadi bagian-bagian terpisah yang dapat dikelola secara independen.</p>
+</li>
+</ul>
+<p>Sebelum dimulai, kamu perlu mengingat kembali bahwa direktori utama adalah direktori <strong>terluar</strong>, sedangkan direktori proyek adalah direktori <strong>di dalam</strong> direktori utama. Perlu diingat bahwa keduanya memiliki nama yang hampir sama. Direktori utama memiliki nama <strong><code>book-tracker</code></strong>, sementara itu direktori proyek memiliki nama <strong><code>book_tracker</code></strong>. Perbedaan hanya terletak pada penggunaan <em>dash</em> (<code>-</code>) dan <em>underscore</em> (<code>_</code>).</p>
+<h3 id="langkah-1-persiapan-awal">Langkah 1: Persiapan Awal</h3>
+<ol>
+<li>
+<p>Buka direktori utama <strong><code>book-tracker</code></strong>.</p>
+</li>
+<li>
+<p>Sebelum memulai, pastikan kamu berada di direktori utama <strong><code>book-tracker</code></strong> yang telah dibuat pada tutorial sebelumnya.</p>
+</li>
+<li>
+<p>Di dalam direktori ini, kamu akan melanjutkan pengembangan proyek Django.</p>
+</li>
+<li>
+<p>Buka terminal atau <em>command prompt</em> dan pastikan direktori kerja kamu adalah direktori utama <strong><code>book-tracker</code></strong>.</p>
+</li>
+<li>
+<p>Aktifkan <em>virtual environment</em> yang telah dibuat sebelumnya. Jalankan perintah berikut sesuai dengan sistem operasi perangkat kamu.</p>
+</li>
+<li>
+<p><strong>Windows:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>env<span class="se">\S</span>cripts<span class="se">\a</span>ctivate.bat
+</code></pre></div>
+</li>
+<li>
+<p><strong>Unix (Linux &amp; Mac OS):</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">source</span><span class="w"> </span>env/bin/activate
+</code></pre></div>
+</li>
+</ol>
+<h3 id="langkah-2-membuat-aplikasi-main-dalam-proyek-book-tracker">Langkah 2: Membuat Aplikasi <code>main</code> dalam Proyek <em>Book Tracker</em></h3>
+<p>Kamu akan membuat aplikasi baru bernama <code>main</code> dalam proyek <em>book tracker</em>.</p>
+<ol>
+<li>Jalankan perintah berikut untuk membuat aplikasi baru.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>python<span class="w"> </span>manage.py<span class="w"> </span>startapp<span class="w"> </span>main
+</code></pre></div>
+<p>Setelah perintah di atas dijalankan, akan terbentuk direktori baru dengan nama <code>main</code> yang akan berisi struktur awal untuk <strong>aplikasimu</strong>.</p>
+<blockquote>
+<p>Mungkin kamu cukup bingung dengan istilah direktori <strong>utama</strong>, direktori <strong>proyek</strong>, atau direktori <strong>aplikasi</strong>. Akan tetapi, seiring berjalannya waktu, kamu pasti bisa!</p>
+</blockquote>
+<ol>
+<li>
+<p>Daftarkan aplikasi <code>main</code> ke dalam proyek.</p>
+</li>
+<li>
+<p>Buka berkas <code>settings.py</code> di dalam direktori proyek <code>book_tracker</code>.</p>
+</li>
+<li>Temukan variabel <code>INSTALLED_APPS</code>.</li>
+<li>
+<p>Tambahkan <code>'main'</code> ke dalam daftar aplikasi yang ada.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="o">...</span><span class="p">,</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="s1">&#39;main&#39;</span><span class="p">,</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="o">...</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="p">]</span>
+</code></pre></div>
+</li>
+</ol>
+<p>Dengan melakukan langkah-langkah tersebut, kamu telah mendaftarkan aplikasi <code>main</code> ke dalam proyek <em>book tracker</em> kamu sehingga proyekmu sudah mengenali bahwa terdapat aplikasi <code>main</code> yang dapat dijalankan.</p>
+<h2 id="tutorial-implementasi-template-dasar">Tutorial: Implementasi <em>Template</em> Dasar</h2>
+<p>Kamu akan membuat <em>template</em> <code>main.html</code> di dalam direktori baru bernama <code>templates</code> pada aplikasi <code>main</code>. <em>Template</em> ini akan digunakan untuk menampilkan data <em>book tracker</em> kamu.</p>
+<blockquote>
+<p>Saat ini, aplikasi <em>book tracker</em> belum menampilkan data apapun. Data akan ditampilkan pada tutorial selanjutnya.</p>
+</blockquote>
+<h3 id="langkah-1-membuat-dan-mengisi-berkas-mainhtml">Langkah 1: Membuat dan Mengisi Berkas <code>main.html</code></h3>
+<p>Sebelum mulai, mari pahami secara singkat mengenai HTML. HTML (<em>Hypertext Markup Language</em>) adalah penanda bahasa yang digunakan untuk membuat struktur dan tampilan konten pada halaman web.</p>
+<blockquote>
+<p>Hint: Kamu akan mempelajari HTML lebih lanjut di tutorial 4.</p>
+</blockquote>
+<ol>
+<li>
+<p><strong>Buat direktori baru</strong> bernama <code>templates</code> di dalam direktori aplikasi <code>main</code>.</p>
+</li>
+<li>
+<p>Di dalam direktori <code>templates</code>, <strong>buat berkas baru</strong> bernama <code>main.html</code> dengan isi sebagai berikut. Gantilah nilai yang sesuai dengan data kamu.</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Book Tracker Page<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="p">&lt;</span><span class="nt">h5</span><span class="p">&gt;</span>Name:<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Pak Bepe<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="cm">&lt;!-- Ubahlah sesuai dengan nama kamu --&gt;</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="p">&lt;</span><span class="nt">h5</span><span class="p">&gt;</span>Class:<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>PBP A<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="cm">&lt;!-- Ubahlah sesuai dengan kelas kamu --&gt;</span>
+</code></pre></div>
+<ol>
+<li>
+<p>Buka berkas HTML di <em>web browser</em>.</p>
+</li>
+<li>
+<p>Sebelum dihubungkan dengan aplikasi, cobalah membuka berkas <code>main.html</code> di <em>web browser</em>-mu.</p>
+</li>
+<li>Perlu dicatat bahwa pada tahap ini <strong>hanya untuk memeriksa</strong> tampilan dasar HTML dan <strong>belum terhubung dengan Django.</strong></li>
+<li>
+<p>Berikut merupakan contoh tampilan HTML yang diharapkan.</p>
+<p><img alt="main.html" src="https://media.discordapp.net/attachments/1133956580728127550/1203386239424921610/image.png?ex=65d0e7c5&amp;is=65be72c5&amp;hm=14853f354f14337fa0459ad5f7d569817ecb7eae18b82c773e44812d095a6ae1&amp;=&amp;format=webp&amp;quality=lossless" /></p>
+</li>
+</ol>
+<h2 id="tutorial-implementasi-model-dasar">Tutorial: Implementasi Model Dasar</h2>
+<h3 id="langkah-1-mengubah-berkas-modelspy-dalam-aplikasi-main">Langkah 1: Mengubah Berkas <code>models.py</code> dalam Aplikasi <code>main</code></h3>
+<p>Pada langkah ini, kamu akan mengubah berkas <code>models.py</code> yang terdapat di dalam direktori aplikasi <code>main</code> untuk mendefinisikan model baru.</p>
+<ol>
+<li>
+<p>Buka berkas <code>models.py</code> pada direktori aplikasi <code>main</code>.</p>
+</li>
+<li>
+<p>Isi berkas <code>models.py</code> dengan kode berikut.</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="k">class</span> <span class="nc">Book</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    <span class="n">name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">255</span><span class="p">)</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    <span class="n">date_added</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateField</span><span class="p">(</span><span class="n">auto_now_add</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    <span class="n">page</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">IntegerField</span><span class="p">()</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>    <span class="n">description</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">()</span>
+</code></pre></div>
+<p><strong>Penjelasan Kode:</strong></p>
+<ul>
+<li><code>models.Model</code> adalah kelas dasar yang digunakan untuk mendefinisikan model dalam Django.</li>
+<li><code>Book</code> adalah nama model yang kamu definisikan.</li>
+<li><code>name</code> (nama), <code>date_added</code> (tanggal tambah), <code>page</code> (halaman), dan <code>description</code> (deskripsi) adalah atribut atau <em>field</em> pada model. Setiap <em>field</em> memiliki tipe data yang sesuai seperti <code>CharField</code>, <code>DateField</code>, <code>IntegerField</code>, dan <code>TextField</code>.</li>
+</ul>
+<h3 id="langkah-2-membuat-dan-mengaplikasikan-migrasi-model">Langkah 2: Membuat dan Mengaplikasikan Migrasi Model</h3>
+<p><strong>Apa itu migrasi model?</strong></p>
+<ul>
+<li>Migrasi model adalah cara Django melacak perubahan pada model basis data kamu.</li>
+<li>Migrasi ini adalah instruksi untuk mengubah struktur tabel basis data sesuai dengan perubahan model yang didefinisikan dalam kodemu.</li>
+</ul>
+<p><strong>Bagaimana cara melakukan migrasi model?</strong></p>
+<ol>
+<li>Jalankan perintah berikut pada terminal atau <em>command prompt</em> di <strong>direktori utama</strong> untuk membuat migrasi model.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>python<span class="w"> </span>manage.py<span class="w"> </span>makemigrations
+</code></pre></div>
+<blockquote>
+<p><code>makemigrations</code> menciptakan berkas migrasi yang berisi perubahan model yang belum diaplikasikan ke dalam basis data.</p>
+</blockquote>
+<ol>
+<li>Masih di <strong>direktori utama</strong>, jalankan perintah berikut untuk menerapkan migrasi ke dalam basis data lokal.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>python<span class="w"> </span>manage.py<span class="w"> </span>migrate
+</code></pre></div>
+<blockquote>
+<p><code>migrate</code> mengaplikasikan perubahan model yang tercantum dalam berkas migrasi ke basis data.</p>
+</blockquote>
+<p><strong>Setiap kali kamu melakukan perubahan pada <em>model</em></strong>, seperti menambahkan atau mengubah atribut, <strong>kamu perlu melakukan migrasi</strong> untuk merefleksikan perubahan tersebut.</p>
+<h2 id="tutorial-menghubungkan-view-dengan-template">Tutorial: Menghubungkan <em>View</em> dengan <em>Template</em></h2>
+<p>Dalam tutorial ini, kamu akan menghubungkan <em>view</em> dengan <em>template</em> menggunakan Django. Langkah-langkah ini akan menjelaskan bagaimana membuat fungsi <em>view</em> <code>show_main</code> dalam aplikasi <code>main</code> dan me-<em>render</em> <em>template</em> dengan data yang telah diambil dari model.</p>
+<h3 id="langkah-1-mengintegrasikan-komponen-mvt">Langkah 1: Mengintegrasikan Komponen MVT</h3>
+<p>Kamu akan mengimpor modul yang diperlukan dan membuat fungsi <em>view</em> <code>show_main</code>.</p>
+<ol>
+<li>
+<p>Buka berkas <code>views.py</code> yang terletak di dalam berkas aplikasi <code>main</code>.</p>
+</li>
+<li>
+<p>Tambahkan baris-baris impor berikut di bagian paling atas berkas apabila belum ada.</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render</span>
+</code></pre></div>
+<p><strong>Penjelasan Kode:</strong></p>
+<p><code>from django.shortcuts import render</code> berguna untuk mengimpor fungsi <em>render</em> dari modul <code>django.shortcuts</code>. Fungsi <em>render</em> digunakan untuk me-<em>render</em> tampilan HTML dengan menggunakan data yang diberikan.</p>
+<ol>
+<li>Tambahkan fungsi <code>show_main</code> di bawah impor:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">def</span> <span class="nf">show_main</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    <span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>        <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Pak Bepe&#39;</span><span class="p">,</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>        <span class="s1">&#39;class&#39;</span><span class="p">:</span> <span class="s1">&#39;PBP A&#39;</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>    <span class="p">}</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s2">&quot;main.html&quot;</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>Penjelasan Kode:</strong></p>
+<ul>
+<li><code>def show_main(request)</code> merupakan deklarasi fungsi <code>show_main</code>, yang menerima parameter <code>request</code>. Fungsi ini akan mengatur permintaan HTTP dan mengembalikan tampilan yang sesuai.</li>
+<li>
+<p><code>context</code> adalah <em>dictionary</em> yang berisi data yang akan dikirimkan ke tampilan. Pada konteks ini, dua data disertakan, yaitu:</p>
+<ul>
+<li><code>name</code>: Data nama.</li>
+<li><code>class</code>: Data kelas.</li>
+</ul>
+</li>
+<li>
+<p><code>return render(request, "main.html", context)</code> berguna untuk me-<em>render</em> tampilan <code>main.html</code> dengan menggunakan fungsi <code>render</code>. Fungsi <code>render</code> mengambil tiga argumen:</p>
+<ul>
+<li><code>request</code>: Ini adalah objek permintaan HTTP yang dikirim oleh pengguna.</li>
+<li><code>main.html</code>: Ini adalah nama berkas <em>template</em> yang akan digunakan untuk me-<em>render</em> tampilan.</li>
+<li><code>context</code>: Ini adalah <em>dictionary</em> yang berisi data yang akan diteruskan ke tampilan untuk digunakan dalam penampilan dinamis.</li>
+</ul>
+</li>
+</ul>
+<h2 id="langkah-2-modifikasi-template">Langkah 2: Modifikasi <em>Template</em></h2>
+<p>Sekarang, kamu akan mengubah <em>template</em> <code>main.html</code> agar dapat menampilkan data yang telah diambil dari <em>model</em>.</p>
+<ol>
+<li>
+<p>Buka berkas <code>main.html</code> yang telah dibuat sebelumnya dalam direktori <code>templates</code> pada direktori <code>main</code>.</p>
+</li>
+<li>
+<p>Ubah nama dan kelas yang sebelumnya dibuat secara statis menjadi kode Django yang sesuai untuk menampilkan data.</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>...
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="p">&lt;</span><span class="nt">h5</span><span class="p">&gt;</span>Name:<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>{{ name }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="p">&lt;</span><span class="nt">h5</span><span class="p">&gt;</span>Class:<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>{{ class }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>Penjelasan Kode:</strong></p>
+<p>Sintaks Django <code>{{ name }}</code> dan <code>{{ class }}</code> digunakan untuk menampilkan nilai dari variabel yang telah didefinisikan dalam <code>context</code>.</p>
+<h2 id="tutorial-mengonfigurasi-routing-url">Tutorial: Mengonfigurasi <em>Routing</em> URL</h2>
+<p>Kamu akan mengatur <em>routing</em> URL agar aplikasi <code>main</code> dapat diakses melalui <em>web browser</em>.</p>
+<h3 id="langkah-1-mengonfigurasi-routing-url-aplikasi-main">Langkah 1: Mengonfigurasi <em>Routing</em> URL Aplikasi <code>main</code></h3>
+<ol>
+<li>Buatlah berkas <strong>baru</strong> bernama<code>urls.py</code> <strong>di dalam</strong> direktori <code>main</code>.</li>
+<li>Isi <code>urls.py</code> dengan kode berikut.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="kn">from</span> <span class="nn">main.views</span> <span class="kn">import</span> <span class="n">show_main</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="n">app_name</span> <span class="o">=</span> <span class="s1">&#39;main&#39;</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">show_main</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;show_main&#39;</span><span class="p">),</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="p">]</span>
+</code></pre></div>
+<p><strong>Penjelasan Kode dalam <code>urls.py</code> pada Aplikasi <code>main</code>:</strong></p>
+<ul>
+<li>Berkas <code>urls.py</code> pada aplikasi <code>main</code> bertanggung jawab untuk mengatur rute URL yang terkait dengan aplikasi <code>main</code>.</li>
+<li>Impor <code>path</code> dari <code>django.urls</code> untuk mendefinisikan pola URL.</li>
+<li>Gunakan fungsi <code>show_main</code> dari modul <code>main.views</code> sebagai tampilan yang akan ditampilkan ketika URL terkait diakses.</li>
+<li>Nama <code>app_name</code> diberikan untuk memberikan nama unik pada pola URL dalam aplikasi.</li>
+</ul>
+<h3 id="langkah-2-mengonfigurasi-routing-url-proyek">Langkah 2: Mengonfigurasi <em>Routing</em> URL Proyek</h3>
+<p>Kamu akan menambahkan rute URL dalam <code>urls.py</code> <strong>pada proyek</strong> untuk menghubungkannya ke tampilan <code>main</code>.</p>
+<ol>
+<li>Buka berkas <code>urls.py</code> <strong>di dalam direktori proyek <code>book_tracker</code>, bukan yang ada di dalam direktori aplikasi <code>main</code></strong>.</li>
+<li>Impor fungsi <code>include</code> dari <code>django.urls</code>.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="o">...</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span><span class="p">,</span> <span class="n">include</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="o">...</span>
+</code></pre></div>
+<ol>
+<li>Tambahkan rute URL seperti berikut untuk mengarahkan ke tampilan <code>main</code> di dalam variabel <code>urlpatterns</code>.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>    <span class="o">...</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="s1">&#39;main.urls&#39;</span><span class="p">)),</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>    <span class="o">...</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="p">]</span>
+</code></pre></div>
+<p><strong>Penjelasan:</strong></p>
+<ul>
+<li>Berkas <code>urls.py</code> pada proyek bertanggung jawab untuk mengatur rute URL dalam skala proyek.</li>
+<li>Fungsi <code>include</code> digunakan untuk mengimpor rute URL dari aplikasi lain (dalam hal ini, dari aplikasi <code>main</code>) ke dalam berkas <code>urls.py</code> proyek.</li>
+<li><em>Path</em> URL <code>''</code> akan diarahkan ke rute yang didefinisikan dalam berkas <code>urls.py</code> aplikasi <code>main</code>. Path URL dibiarkan berupa string kosong agar halaman aplikasi <code>main</code> dapat diakses secara langsung.</li>
+</ul>
+<blockquote>
+<p>Sebagai bayangan, apabila kamu menggunakan <em>path</em> <code>'main/'</code> pada contoh di atas, maka kamu perlu mengakses halaman <code>http://localhost:8000/main/</code> untuk mengakses halaman aplikasi <code>main</code>. Karena <em>path</em> yang ditentukan adalah <code>''</code>, maka kamu dapat mengakses aplikasi <code>main</code> melalui URL <code>http://localhost:8000/</code> saja.</p>
+</blockquote>
+<ol>
+<li>
+<p>Jalankan proyek Django dengan menjalankan perintah <code>python manage.py runserver</code> pada terminal atau <em>command prompt</em> di direktori utama.</p>
+</li>
+<li>
+<p>Bukalah <a href="http://localhost:8000/">http://localhost:8000/</a> di <em>web browser</em> favoritmu untuk melihat halaman yang sudah kamu buat.</p>
+</li>
+</ol>
+<p>Dengan langkah-langkah di atas, kamu telah berhasil mengimplementasikan tampilan dasar dalam aplikasi <code>main</code> dan menghubungkannya dengan rute URL proyek. Pastikan kamu memahami setiap langkah dan informasi yang diberikan untuk mengaktifkan tampilan dalam proyek Django-mu</p>
+<h3 id="apa-bedanya-urlspy-pada-aplikasi-dan-urlspy-pada-proyek">Apa bedanya <code>urls.py</code> pada aplikasi dan <code>urls.py</code> pada proyek?</h3>
+<ul>
+<li>Berkas <code>urls.py</code> pada aplikasi mengatur rute URL spesifik untuk fitur-fitur dalam aplikasi tersebut</li>
+<li><code>urls.py</code> pada proyek mengarahkan rute URL tingkat proyek dan dapat mengimpor rute URL dari berkas <code>urls.py</code> aplikasi-aplikasi, memungkinkan aplikasi dalam proyek Django untuk bersifat modular dan terpisah.</li>
+</ul>
+<h2 id="tutorial-pengenalan-django-unit-testing">Tutorial: Pengenalan Django <em>Unit Testing</em></h2>
+<p><em>Unit testing</em> dapat digunakan untuk mengecek apakah kode yang dibuat bekerja sesuai dengan keinginan. Hal ini juga berguna ketika kamu melakukan perubahan kode. Dengan menggunakan tes, kamu bisa mengecek apakah perubahan yang dilakukan dapat menyebabkan perilaku yang tidak diinginkan pada aplikasi.</p>
+<h3 id="langkah-1-membuat-unit-test">Langkah 1: Membuat Unit <em>Test</em></h3>
+<ol>
+<li>Bukalah berkas <code>tests.py</code> pada direktori aplikasi <code>main</code>.</li>
+<li>Isi <code>tests.py</code> dengan kode berikut.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kn">from</span> <span class="nn">django.test</span> <span class="kn">import</span> <span class="n">TestCase</span><span class="p">,</span> <span class="n">Client</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="k">class</span> <span class="nc">mainTest</span><span class="p">(</span><span class="n">TestCase</span><span class="p">):</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>    <span class="k">def</span> <span class="nf">test_main_url_is_exist</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>        <span class="n">response</span> <span class="o">=</span> <span class="n">Client</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>    <span class="k">def</span> <span class="nf">test_main_using_main_template</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>        <span class="n">response</span> <span class="o">=</span> <span class="n">Client</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">assertTemplateUsed</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="s1">&#39;main.html&#39;</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>Penjelasan:</strong></p>
+<ul>
+<li><code>test_main_url_is_exist</code> adalah tes untuk mengecek apakah <em>path</em> URL <code>''</code> dapat diakses. <em>Path</em> <code>''</code> artinya hanya <code>http://localhost:8000/</code> tanpa <em>path</em> tambahan di bagian belakang URL.</li>
+<li><code>test_main_using_main_template</code> adalah tes untuk mengecek apakah halaman <code>''</code> di-<em>render</em> menggunakan <em>template</em> <code>main.html</code>.</li>
+</ul>
+<h3 id="langkah-2-menjalankan-test">Langkah 2: Menjalankan <em>Test</em></h3>
+<ol>
+<li>Jalankan tes dengan menggunakan perintah berikut.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>python<span class="w"> </span>manage.py<span class="w"> </span><span class="nb">test</span>
+</code></pre></div>
+<ol>
+<li>Jika tes berhasil, akan mengeluarkan informasi berikut.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>Found 2 test(s).
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a> Creating test database for alias &#39;default&#39;...
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a> System check identified no issues (0 silenced).
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a> ..
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a> ----------------------------------------------------------------------
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a> Ran 2 tests in 0.006s
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a> OK
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a> Destroying test database for alias &#39;default&#39;...
+</code></pre></div>
+<p><strong>Selamat!</strong> Kamu telah berhasil menulis Django <em>Test</em> dan menjalankannya.</p>
+<h2 id="penutup">Penutup</h2>
+<ol>
+<li>Pada akhir tutorial ini, struktur direktori lokalmu akan terlihat seperti ini.</li>
+</ol>
+<p><img alt="Struktur Direktori Lokal" src="https://media.discordapp.net/attachments/1133956580728127550/1203392570441601144/image.png?ex=65d0edaa&amp;is=65be78aa&amp;hm=5823abe8aaa676b508f7ce69333a78f18667f9c1ced302b9a5656ea7dd4a77a3&amp;=&amp;format=webp&amp;quality=lossless" /></p>
+<blockquote>
+<p>Huruf U menandakan bahwa terdapat berkas baru yang belum dilacak oleh Git. Huruf M menandakan bahwa terdapat berkas yang telah dilacak sebelumnya yang dimodifikasi.</p>
+</blockquote>
+<ol>
+<li>Sebelum melakukan langkah ini, <strong>pastikan struktur direktori lokal sudah benar</strong>. Selanjunya, lakukan <code>add</code>, <code>commit</code> dan <code>push</code> untuk memperbarui repositori GitHub.</li>
+<li>Jalankan perintah berikut untuk melakukan <code>add</code>, <code>commit</code> dan <code>push</code>.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>git<span class="w"> </span>add<span class="w"> </span>.
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;&lt;pesan_commit&gt;&quot;</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>&lt;branch_utama&gt;
+</code></pre></div>
+<ul>
+<li>Ubah <code>&lt;pesan_commit&gt;</code> sesuai dengan keinginan. Contoh: <code>git commit -m "tutorial 1 selesai"</code>.</li>
+<li>
+<p>Ubah <code>&lt;branch_utama&gt;</code> sesuai dengan nama branch utamamu. Contoh: <code>git push origin main</code> atau <code>git push origin master</code>.</p>
+</li>
+<li>
+<p>Berikut struktur direktori GitHub setelah kamu menyelesaikan tutorial ini.</p>
+</li>
+</ul>
+<p><img alt="Struktur Repositori Github" src="https://media.discordapp.net/attachments/1133956580728127550/1203394340903198780/image.png?ex=65d0ef50&amp;is=65be7a50&amp;hm=e715e7cbe57c194f9f88b25126841b4a52ce0fb2dd74a8190bedb9850c9057d5&amp;=&amp;format=webp&amp;quality=lossless&amp;width=255&amp;height=543" /></p>
+<h2 id="referensi-tambahan">Referensi Tambahan</h2>
+<ul>
+<li><a href="https://docs.djangoproject.com/en/4.2/topics/testing/">Django Unit Testing</a></li>
+</ul>
+<h2 id="kontributor">Kontributor</h2>
+<ul>
+<li>Muhammad Nabil Mu'afa</li>
+<li>Muhammad Iqbal Dwitama</li>
+</ul>
+<h2 id="credits">Credits</h2>
+<p>Tutorial ini dikembangkan berdasarkan <a href="https://github.com/pbp-fasilkom-ui/ganjil-2024">PBP Ganjil 2024</a> yang ditulis oleh Tim Pengajar Pemrograman Berbasis Platform 2023/2024. Segala tutorial serta instruksi yang dicantumkan pada repositori ini dirancang sedemikian rupa sehingga mahasiswa yang sedang mengambil mata kuliah Pemrograman Berbasis Platform dapat menyelesaikan tutorial saat sesi lab berlangsung.</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Pembaruan terakhir">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">5 Februari 2024 20:39:14</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Dibuat">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">5 Februari 2024 20:39:14</span>
+  </span>
+
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 PBP Fasilkom UI
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.annotate", "navigation.tabs", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Tersalin ke clipboard", "clipboard.copy": "Salin ke clipboard", "search.result.more.one": "1 lagi di halaman ini", "search.result.more.other": "# lagi di halaman ini", "search.result.none": "Tidak ada dokumen yang sesuai", "search.result.one": "1 dokumen ditemukan", "search.result.other": "# dokumen ditemukan", "search.result.placeholder": "Ketik untuk mulai pencarian", "search.result.term.missing": "Tidak ada", "select.version": "Pilih versi"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.caa56a14.min.js"></script>
+      
+    
+  </body>
+</html>
