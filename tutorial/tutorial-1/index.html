@@ -13,6 +13,10 @@
       
       
       
+        <link rel="prev" href="../tutorial-0/">
+      
+      
+        <link rel="next" href="../../tugas/tugas-1/">
       
       
       <link rel="icon" href="../../assets/img/logo.png">
@@ -20,7 +24,7 @@
     
     
       
-        <title>Tutorial 1: Pengenalan Aplikasi Django dan Model-View-Template (MVT) pada Django - PBP Genap 2023/2024</title>
+        <title>Tutorial 1 - PBP Genap 2023/2024</title>
       
     
     
@@ -107,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tutorial 1: Pengenalan Aplikasi Django dan Model-View-Template (MVT) pada Django
+              Tutorial 1
             
           </span>
         </div>
@@ -220,10 +224,12 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../tutorial-0/" class="md-tabs__link">
           
   
@@ -351,10 +357,14 @@
       
   
   
+    
   
   
+  
     
     
+      
+        
       
         
       
@@ -365,12 +375,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -384,7 +394,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Tutorial
@@ -407,6 +417,388 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Tutorial 1
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Tutorial 1
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Daftar isi">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Daftar isi
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tujuan-pembelajaran" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tujuan Pembelajaran
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ringkasan-hasil-tutorial-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ringkasan Hasil Tutorial 0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pengenalan-mengenai-konsep-mvt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pengenalan Mengenai Konsep MVT
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pengenalan Mengenai Konsep MVT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apa-itu-konsep-mvt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apa Itu Konsep MVT?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apa-itu-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apa Itu Model?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apa-itu-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apa Itu View?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apa-itu-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apa Itu Template?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hubungan-antara-komponen-komponen-mvt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hubungan Antara Komponen-komponen MVT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manfaat-mvt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manfaat MVT
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-membuat-aplikasi-django-beserta-konfigurasi-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tutorial: Membuat Aplikasi Django beserta Konfigurasi Model
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tutorial: Membuat Aplikasi Django beserta Konfigurasi Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#langkah-1-persiapan-awal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Langkah 1: Persiapan Awal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#langkah-2-membuat-aplikasi-main-dalam-proyek-book-tracker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Langkah 2: Membuat Aplikasi main dalam Proyek Book Tracker
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-implementasi-template-dasar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tutorial: Implementasi Template Dasar
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tutorial: Implementasi Template Dasar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#langkah-1-membuat-dan-mengisi-berkas-mainhtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Langkah 1: Membuat dan Mengisi Berkas main.html
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-implementasi-model-dasar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tutorial: Implementasi Model Dasar
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tutorial: Implementasi Model Dasar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#langkah-1-mengubah-berkas-modelspy-dalam-aplikasi-main" class="md-nav__link">
+    <span class="md-ellipsis">
+      Langkah 1: Mengubah Berkas models.py dalam Aplikasi main
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#langkah-2-membuat-dan-mengaplikasikan-migrasi-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Langkah 2: Membuat dan Mengaplikasikan Migrasi Model
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-menghubungkan-view-dengan-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tutorial: Menghubungkan View dengan Template
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tutorial: Menghubungkan View dengan Template">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#langkah-1-mengintegrasikan-komponen-mvt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Langkah 1: Mengintegrasikan Komponen MVT
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#langkah-2-modifikasi-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Langkah 2: Modifikasi Template
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-mengonfigurasi-routing-url" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tutorial: Mengonfigurasi Routing URL
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tutorial: Mengonfigurasi Routing URL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#langkah-1-mengonfigurasi-routing-url-aplikasi-main" class="md-nav__link">
+    <span class="md-ellipsis">
+      Langkah 1: Mengonfigurasi Routing URL Aplikasi main
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#langkah-2-mengonfigurasi-routing-url-proyek" class="md-nav__link">
+    <span class="md-ellipsis">
+      Langkah 2: Mengonfigurasi Routing URL Proyek
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apa-bedanya-urlspy-pada-aplikasi-dan-urlspy-pada-proyek" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apa bedanya urls.py pada aplikasi dan urls.py pada proyek?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-pengenalan-django-unit-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tutorial: Pengenalan Django Unit Testing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tutorial: Pengenalan Django Unit Testing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#langkah-1-membuat-unit-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      Langkah 1: Membuat Unit Test
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#langkah-2-menjalankan-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      Langkah 2: Menjalankan Test
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#penutup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Penutup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referensi-tambahan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referensi Tambahan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kontributor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kontributor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Credits
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
