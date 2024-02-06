@@ -51,5 +51,3 @@ Perhatikan bahwa kamu harus mengerjakan tugas ini menggunakan repositori yang **
 Tenggat waktu pengerjaan Tugas 2 adalah hari **Selasa, 13 Februari, pukul 12.00 siang.**
 
 Harap mengumpulkan link repositori yang kamu gunakan ke dalam slot submisi yang telah disediakan di SCELE.
-
-> Hint: Silakan membaca dokumentasi [ini](https://docs.djangoproject.com/en/4.2/topics/testing/) atau sumber lainnya untuk melihat cara membuat testing di Django.
