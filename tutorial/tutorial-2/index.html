@@ -1,0 +1,1439 @@
+
+<!doctype html>
+<html lang="id" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Situs Web Pemrograman Berbasis Platform Genap 2023/2024">
+      
+      
+        <meta name="author" content="PBP Fasilkom UI">
+      
+      
+      
+        <link rel="prev" href="../tutorial-1/">
+      
+      
+        <link rel="next" href="../../tugas/tugas-1/">
+      
+      
+      <link rel="icon" href="../../assets/img/logo.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
+    
+    
+      
+        <title>Tutorial 2 - PBP Genap 2023/2024</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f2e4d321.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+    <meta name="google-site-verification" content="VRNmwVzPf-m-7Gq2QtPDhYWbUIkjyenlNJLT33MQMZE" />
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tutorial-2-form-dan-data-delivery" class="md-skip">
+          Lewati ke isi
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="PBP Genap 2023/2024" class="md-header__button md-logo" aria-label="PBP Genap 2023/2024" data-md-component="logo">
+      
+  <img src="../../assets/img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PBP Genap 2023/2024
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tutorial 2
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-orange"  aria-label="Beralih ke mode gelap"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Beralih ke mode gelap" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="deep-orange"  aria-label="Beralih ke mode terang"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Beralih ke mode terang" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cari" placeholder="Cari" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cari">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Kosongkan" aria-label="Kosongkan" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Mempersiapkan pencarian
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tab" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+    
+  
+  Beranda
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../tutorial-0/" class="md-tabs__link">
+          
+  
+    
+  
+  Tutorial
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tugas/tugas-1/" class="md-tabs__link">
+          
+  
+    
+  
+  Tugas
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigasi" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="PBP Genap 2023/2024" class="md-nav__button md-logo" aria-label="PBP Genap 2023/2024" data-md-component="logo">
+      
+  <img src="../../assets/img/logo.png" alt="logo">
+
+    </a>
+    PBP Genap 2023/2024
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Beranda
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Beranda
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Tutorial
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorial
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial-0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tutorial 0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tutorial 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Tutorial 2
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Tutorial 2
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Daftar isi">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Daftar isi
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tujuan-pembelajaran" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tujuan Pembelajaran​
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pengenalan-data-delivery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pengenalan Data Delivery
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xml-extensible-markup-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      XML (Extensible Markup Language)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#json-javascript-object-notation" class="md-nav__link">
+    <span class="md-ellipsis">
+      JSON (JavaScript Object Notation)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pre-tutorial-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pre-Tutorial Notes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-implementasi-skeleton-sebagai-kerangka-views" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tutorial: Implementasi Skeleton sebagai Kerangka Views
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-membuat-form-input-data-dan-menampilkan-data-buku-pada-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tutorial: Membuat Form Input Data dan Menampilkan Data Buku Pada HTML
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-mengembalikan-data-dalam-bentuk-xml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tutorial Mengembalikan Data dalam Bentuk XML
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-mengembalikan-data-dalam-bentuk-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tutorial: Mengembalikan Data dalam Bentuk JSON
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-mengembalikan-data-berdasarkan-id-dalam-bentuk-xml-dan-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tutorial: Mengembalikan Data Berdasarkan ID dalam Bentuk XML dan JSON
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-penggunaan-postman-sebagai-data-viewer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tutorial: Penggunaan Postman Sebagai Data Viewer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#penutup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Penutup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referensi-tambahan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referensi Tambahan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kontributor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kontributor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Credits
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tugas
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Tugas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tugas/tugas-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tugas 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tugas/tugas-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tugas 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Daftar isi">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Daftar isi
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tujuan-pembelajaran" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tujuan Pembelajaran​
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pengenalan-data-delivery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pengenalan Data Delivery
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xml-extensible-markup-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      XML (Extensible Markup Language)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#json-javascript-object-notation" class="md-nav__link">
+    <span class="md-ellipsis">
+      JSON (JavaScript Object Notation)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pre-tutorial-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pre-Tutorial Notes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-implementasi-skeleton-sebagai-kerangka-views" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tutorial: Implementasi Skeleton sebagai Kerangka Views
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-membuat-form-input-data-dan-menampilkan-data-buku-pada-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tutorial: Membuat Form Input Data dan Menampilkan Data Buku Pada HTML
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-mengembalikan-data-dalam-bentuk-xml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tutorial Mengembalikan Data dalam Bentuk XML
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-mengembalikan-data-dalam-bentuk-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tutorial: Mengembalikan Data dalam Bentuk JSON
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-mengembalikan-data-berdasarkan-id-dalam-bentuk-xml-dan-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tutorial: Mengembalikan Data Berdasarkan ID dalam Bentuk XML dan JSON
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-penggunaan-postman-sebagai-data-viewer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tutorial: Penggunaan Postman Sebagai Data Viewer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#penutup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Penutup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referensi-tambahan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referensi Tambahan
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kontributor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kontributor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Credits
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="tutorial-2-form-dan-data-delivery">Tutorial 2: Form dan Data Delivery</h1>
+<p>Pemrograman Berbasis Platform (CSGE602022) — diselenggarakan oleh Fakultas Ilmu Komputer Universitas Indonesia, Semester Genap 2023/2024</p>
+<hr />
+<h2 id="tujuan-pembelajaran">Tujuan Pembelajaran​</h2>
+<p>Setelah menyelesaikan tutorial ini, mahasiswa diharapkan untuk dapat:</p>
+<ul>
+<li>Mengetahui <code>XML</code> dan <code>JSON</code> sebagai salah satu metode <em>data delivery</em></li>
+<li>Memahami cara kerja submisi data yang diberikan oleh pengguna menggunakan elemen <code>form</code></li>
+<li>Memahami cara mengirimkan data menggunakan format <code>XML</code> dan <code>JSON</code></li>
+<li>Memahami cara mengambil data spesifik berdasarkan <code>ID</code></li>
+</ul>
+<h2 id="pengenalan-data-delivery">Pengenalan Data Delivery</h2>
+<p>Dalam mengembangkan suatu <em>platform</em>, ada kalanya kita perlu mengirimkan data dari satu <em>stack</em> ke <em>stack</em> lainnya. Data yang dikirimkan bisa bermacam-macam bentuknya. Beberapa contoh format data yang umum digunakan antara lain HTML, XML, dan JSON. Implementasi <em>data delivery</em> dalam bentuk HTML sudah kamu pelajari pada tutorial sebelumnya. Pada tutorial ini akan diajarkan terkait XML dan JSON.</p>
+<h2 id="xml-extensible-markup-language">XML (Extensible Markup Language)</h2>
+<p>XML adalah singkatan dari <em>eXtensible Markup Language</em>. XML didesain menjadi <em>self-descriptive</em>, jadi dengan membaca XML tersebut kita bisa mengerti informasi apa yang ingin disampaikan dari data yang tertulis. XML digunakan pada banyak aplikasi web maupun <em>mobile</em>, yaitu untuk menyimpan dan mengirimkan data. XML hanya berisi informasi yang dibungkus di dalam <em>tag</em>. Kita perlu menulis program untuk mengirim, menerima, menyimpan, atau menampilkan informasi tersebut.</p>
+<p>Contoh Format XML:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">&lt;person&gt;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">&lt;name&gt;</span>Alice<span class="w"> </span>Johnson<span class="nt">&lt;/name&gt;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">&lt;age&gt;</span>25<span class="nt">&lt;/age&gt;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">&lt;address&gt;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="nt">&lt;street&gt;</span>123<span class="w"> </span>Main<span class="w"> </span>St<span class="nt">&lt;/street&gt;</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="nt">&lt;city&gt;</span>Los<span class="w"> </span>Angeles<span class="nt">&lt;/city&gt;</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="nt">&lt;zip&gt;</span>90001<span class="nt">&lt;/zip&gt;</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="nt">&lt;/address&gt;</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="nt">&lt;/person&gt;</span>
+</code></pre></div>
+<p>XML di atas sangatlah <em>self-descriptive</em>:</p>
+<ul>
+<li>Ada informasi nama (<code>name</code>)</li>
+<li>Ada informasi umur (<code>age</code>)</li>
+<li>Ada informasi alamat (<code>address</code>)</li>
+<li>Ada informasi jalan (<code>street</code>)</li>
+<li>Ada informasi kota (<code>city</code>)</li>
+<li>Ada informasi kode pos (<code>zip</code>)</li>
+</ul>
+<p>Dokumen XML membentuk struktur seperti <em>tree</em> yang dimulai dari <em>root</em>, lalu <em>branch</em>, hingga berakhir pada <em>leaves</em>. Dokumen XML <strong>harus mengandung sebuah <em>root element</em></strong> yang merupakan <em>parent</em> dari elemen lainnya. Pada contoh di atas, <code>&lt;person&gt;</code> adalah <em>root element</em>.</p>
+<p>Baris <code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;</code> biasanya disebut sebagai <strong>XML Prolog</strong>. XML Prolog bersifat opsional, akan tetapi jika ada maka posisinya harus berada di awal dokumen XML. Pada dokumen XML, <strong>semua elemen wajib memiliki</strong> <strong>closing tag</strong>. <strong>Tag</strong> pada XML sifatnya <strong>case sensitive</strong>, sehingga tag <code>&lt;person&gt;</code> dianggap <strong>berbeda</strong> dengan tag <code>&lt;Person&gt;</code>.</p>
+<h2 id="json-javascript-object-notation">JSON (JavaScript Object Notation)</h2>
+<p>JSON adalah singkatan dari <em>JavaScript Object Notation</em>. JSON didesain menjadi <em>self-describing</em>, sehingga JSON sangat mudah untuk dimengerti. JSON digunakan pada banyak aplikasi web maupun <em>mobile</em>, yaitu untuk menyimpan dan mengirimkan data. Sintaks JSON merupakan turunan dari <em>Object</em> JavaScript. Akan tetapi format JSON berbentuk <em>text</em>, sehingga kode untuk membaca dan membuat JSON banyak terdapat dibanyak bahasa pemrograman.</p>
+<p>Contoh format JSON:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Alice Johnson&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nt">&quot;age&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nt">&quot;address&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="nt">&quot;street&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;123 Main St&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="nt">&quot;city&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Los Angeles&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="nt">&quot;zip&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;90001&quot;</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="p">}</span>
+</code></pre></div>
+<p>Data pada JSON disimpan dalam bentuk <em>key</em> dan <em>value</em>. Pada contoh di atas yang menjadi <em>key</em> adalah <code>name</code>, <code>age</code>, dan <code>address</code>. <em>Value</em> dapat berupa tipe data primitif (<em>string, number, boolean</em>) ataupun berupa objek.</p>
+<h2 id="pre-tutorial-notes">Pre-Tutorial Notes</h2>
+<p>Sebelum kamu memulai, serta untuk membantumu mengikuti tutorial 2 dengan baik, kami mengharapkan beberapa hasil berikut dari tutorial 1:</p>
+<ul>
+<li>Struktur direktori <code>book-tracker</code> secara lokal adalah sebagai berikut.</li>
+</ul>
+<p><img alt="Struktur direktori lokal" src="https://media.discordapp.net/attachments/1133956580728127550/1203392570441601144/image.png?ex=65d0edaa&amp;is=65be78aa&amp;hm=5823abe8aaa676b508f7ce69333a78f18667f9c1ced302b9a5656ea7dd4a77a3&amp;=&amp;format=webp&amp;quality=lossless" /></p>
+<ul>
+<li>Struktur repository <code>book-tracker</code> pada GitHub adalah sebagai berikut.</li>
+</ul>
+<p><img alt="Struktur Repositori Github" src="https://media.discordapp.net/attachments/1133956580728127550/1203394340903198780/image.png?ex=65d0ef50&amp;is=65be7a50&amp;hm=e715e7cbe57c194f9f88b25126841b4a52ce0fb2dd74a8190bedb9850c9057d5&amp;=&amp;format=webp&amp;quality=lossless&amp;width=255&amp;height=543" /></p>
+<h2 id="tutorial-implementasi-skeleton-sebagai-kerangka-views">Tutorial: Implementasi <em>Skeleton</em> sebagai Kerangka <em>Views</em></h2>
+<p>Sebelum kita membuat form registrasi, kita perlu membuat suatu <em>skeleton</em> yang berfungsi sebagai kerangka <em>views</em> dari situs web kita. Dengan kerangka <em>views</em> ini, kita dapat memastikan adanya konsistensi dalam desain situs web kita serta memperkecil kemungkinan terjadinya redundansi kode. Pada tutorial ini, kita akan membuat <em>skeleton</em> untuk situs web yang akan kita buat pada tutorial selanjutnya.</p>
+<ol>
+<li>Buat <em>folder</em> <code>templates</code> pada <em>root folder</em> (<strong>direktori utama</strong>) dan buatlah sebuah berkas HTML baru bernama <code>base.html</code>. Berkas <code>base.html</code> berfungsi sebagai <em>template</em> dasar yang dapat digunakan sebagai kerangka umum untuk halaman web lainnya di dalam proyek. Isilah berkas <code>base.html</code> tersebut dengan kode berikut:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>{% load static %}
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span> <span class="p">/&gt;</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span> <span class="p">/&gt;</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    {% block meta %} {% endblock meta %}
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    {% block content %} {% endblock content %}
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Baris-baris yang dikurung dalam <code>{% ... %}</code> disebut dengan <em>template tags</em> Django. Baris-baris inilah yang akan berfungsi untuk memuat data secara dinamis dari Django ke HTML.</p>
+<ol>
+<li>Buka <code>settings.py</code> yang ada pada direktori proyek (<code>book_tracker</code>) dan carilah baris yang mengandung variabel <code>TEMPLATES</code>. Sesuaikan kode yang ada dengan potongan kode berikut agar berkas <code>base.html</code> terdeteksi sebagai berkas <em>template</em>.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="o">...</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">TEMPLATES</span> <span class="o">=</span> <span class="p">[</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="p">{</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>        <span class="s1">&#39;BACKEND&#39;</span><span class="p">:</span> <span class="s1">&#39;django.template.backends.django.DjangoTemplates&#39;</span><span class="p">,</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>        <span class="s1">&#39;DIRS&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">BASE_DIR</span> <span class="o">/</span> <span class="s1">&#39;templates&#39;</span><span class="p">],</span> <span class="c1"># Tambahkan konten baris ini</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>        <span class="s1">&#39;APP_DIRS&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>        <span class="o">...</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    <span class="p">}</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="p">]</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="o">...</span>
+</code></pre></div>
+<ol>
+<li>Pada subdirektori <code>templates</code> yang ada pada direktori <code>main</code> (<code>main/templates/</code>), ubahlah kode berkas <code>main.html</code> yang telah dibuat di tutorial sebelumnya menjadi sebagai berikut.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>{% extends &#39;base.html&#39; %} {% block content %}
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Book Tracker Page<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="p">&lt;</span><span class="nt">h5</span><span class="p">&gt;</span>Name:<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>{{name}}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="p">&lt;</span><span class="nt">h5</span><span class="p">&gt;</span>Class:<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>{{class}}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>{% endblock content %}
+</code></pre></div>
+<blockquote>
+<p>Perhatikan bahwa kode diatas merupakan kode yang sama dengan kode pada <code>main.html</code> pada tutorial sebelumnya. Perbedaannya adalah pada kode diatas, kita menggunakan <code>base.html</code> sebagai <em>template</em> utama.</p>
+</blockquote>
+<h2 id="tutorial-membuat-form-input-data-dan-menampilkan-data-buku-pada-html">Tutorial: Membuat Form Input Data dan Menampilkan Data Buku Pada HTML</h2>
+<p>Sampai saat ini, belum ada data yang ditambahkan dan dimunculkan ke dalam aplikasi. Sekarang, kita akan membuat sebuah <em>form</em> sederhana untuk menginput data buku pada aplikasi sehingga nantinya kamu dapat menambahkan data baru untuk ditampilkan pada halaman utama.</p>
+<ol>
+<li>Buat berkas baru pada direktori <code>main</code> dengan nama <code>forms.py</code> untuk membuat struktur <em>form</em> yang dapat menerima data buku baru. Tambahkan kode berikut ke dalam berkas <code>forms.py</code>.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span> <span class="nn">django.forms</span> <span class="kn">import</span> <span class="n">ModelForm</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kn">from</span> <span class="nn">main.models</span> <span class="kn">import</span> <span class="n">Book</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="k">class</span> <span class="nc">BookForm</span><span class="p">(</span><span class="n">ModelForm</span><span class="p">):</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>        <span class="n">model</span> <span class="o">=</span> <span class="n">Book</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>        <span class="n">fields</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;page&quot;</span><span class="p">,</span> <span class="s2">&quot;description&quot;</span><span class="p">]</span>
+</code></pre></div>
+<p><strong>Penjelasan Kode:</strong></p>
+<ul>
+<li><code>model = Book</code> untuk menunjukkan model yang akan digunakan untuk <em>form</em>. Ketika data dari <em>form</em> disimpan, isi dari <em>form</em> akan disimpan menjadi sebuah objek <code>Book</code>.</li>
+<li>
+<p><code>fields = ["name", "page", "description"]</code> untuk menunjukkan <em>field</em> dari model Book yang digunakan untuk <em>form</em>. <em>Field</em> <code>date_added</code> tidak dimasukkan ke <em>list</em> <code>fields</code> karena tanggal ditambahkan secara otomatis.</p>
+</li>
+<li>
+<p>Buka berkas <code>views.py</code> yang ada pada folder <code>main</code> dan tambahkan beberapa <em>import</em> berikut pada bagian paling atas.</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render</span><span class="p">,</span> <span class="n">redirect</span>   <span class="c1"># Tambahkan import redirect di baris ini</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kn">from</span> <span class="nn">main.forms</span> <span class="kn">import</span> <span class="n">BookForm</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="kn">from</span> <span class="nn">main.models</span> <span class="kn">import</span> <span class="n">Book</span>
+</code></pre></div>
+<ol>
+<li>Masih di berkas yang sama, buat fungsi baru dengan nama <code>create_book</code> yang menerima parameter <code>request</code>. Tambahkan potongan kode di bawah ini untuk menghasilkan formulir yang dapat menambahkan data buku secara otomatis ketika data di-<em>submit</em> dari <em>form</em>.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">def</span> <span class="nf">create_book</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    <span class="n">form</span> <span class="o">=</span> <span class="n">BookForm</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span> <span class="ow">or</span> <span class="kc">None</span><span class="p">)</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">is_valid</span><span class="p">()</span> <span class="ow">and</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s2">&quot;POST&quot;</span><span class="p">:</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>        <span class="n">form</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">&#39;main:show_main&#39;</span><span class="p">)</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>    <span class="n">context</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;form&#39;</span><span class="p">:</span> <span class="n">form</span><span class="p">}</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s2">&quot;create_book.html&quot;</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>Penjelasan Kode:</strong></p>
+<ul>
+<li><code>form = BookForm(request.POST or None)</code> digunakan untuk membuat <code>BookForm</code> baru dengan memasukkan QueryDict berdasarkan input dari <em>user</em> pada <code>request.POST</code>.</li>
+<li><code>form.is_valid()</code> digunakan untuk memvalidasi isi input dari <em>form</em> tersebut.</li>
+<li><code>form.save()</code> digunakan untuk membuat dan menyimpan data dari <em>form</em> tersebut.</li>
+<li>
+<p><code>return redirect('main:show_main')</code> digunakan untuk melakukan <em>redirect</em> ke fungsi <code>show_main</code> pada <em>views</em> aplikasi <code>main</code> setelah data <em>form</em> berhasil disimpan.</p>
+</li>
+<li>
+<p>Ubahlah fungsi <code>show_main</code> yang sudah ada pada berkas <code>views.py</code> menjadi seperti berikut.</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">def</span> <span class="nf">show_main</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    <span class="n">books</span> <span class="o">=</span> <span class="n">Book</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    <span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>        <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Pak Bepe&#39;</span><span class="p">,</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>        <span class="s1">&#39;class&#39;</span><span class="p">:</span> <span class="s1">&#39;PBP A&#39;</span><span class="p">,</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>        <span class="s1">&#39;books&#39;</span><span class="p">:</span> <span class="n">books</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>    <span class="p">}</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s2">&quot;main.html&quot;</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>Penjelasan Kode:</strong></p>
+<p>Fungsi <code>Book.objects.all()</code> digunakan untuk mengambil seluruh objek <code>Book</code> yang tersimpan pada <em>database</em>.</p>
+<ol>
+<li>Buka <code>urls.py</code> yang ada pada direktori <code>main</code> dan <em>import</em> fungsi <code>create_book</code> yang sudah kamu buat tadi.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kn">from</span> <span class="nn">main.views</span> <span class="kn">import</span> <span class="n">show_main</span><span class="p">,</span> <span class="n">create_book</span>
+</code></pre></div>
+<ol>
+<li>Tambahkan <em>path</em> URL ke dalam variabel <code>urlpatterns</code> pada <code>urls.py</code> di <code>main</code> untuk mengakses fungsi yang sudah di-<em>import</em> pada poin sebelumnya.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>   <span class="o">...</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>   <span class="n">path</span><span class="p">(</span><span class="s1">&#39;create-book&#39;</span><span class="p">,</span> <span class="n">create_book</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;create_book&#39;</span><span class="p">),</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="p">]</span>
+</code></pre></div>
+<ol>
+<li>Buat berkas HTML baru dengan nama <code>create_book.html</code> pada direktori <code>main/templates</code>. Isi <code>create_book.html</code> dengan kode berikut.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>{% extends &#39;base.html&#39; %} {% block content %}
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Add New Book<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="p">&lt;</span><span class="nt">form</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;POST&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>  {% csrf_token %}
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>  <span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>    {{ form.as_table }}
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Add Book&quot;</span> <span class="p">/&gt;</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>      <span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>  <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>{% endblock %}
+</code></pre></div>
+<p><strong>Penjelasan Kode:</strong></p>
+<ul>
+<li><code>&lt;form method="POST"&gt;</code> digunakan untuk menandakan <em>block</em> untuk <em>form</em> dengan metode POST.</li>
+<li><code>{% csrf_token %}</code> adalah token yang berfungsi sebagai <em>security</em>. Token ini di-<em>generate</em> secara otomatis oleh Django untuk mencegah serangan berbahaya.</li>
+<li><code>{{ form.as_table }}</code> adalah <em>template tag</em> yang digunakan untuk menampilkan <em>fields</em> form yang sudah dibuat pada <code>forms.py</code> sebagai <em>table</em>.</li>
+<li>
+<p><code>&lt;input type="submit" value="Add Book"/&gt;</code> digunakan sebagai tombol <em>submit</em> untuk mengirimkan <em>request</em> ke <em>view</em> <code>create_book(request)</code>.</p>
+</li>
+<li>
+<p>Buka <code>main.html</code> dan tambahkan kode berikut di dalam <code>{% block content %}</code> untuk menampilkan data produk dalam bentuk <em>table</em> serta tombol "Add New Book" yang akan <em>redirect</em> ke halaman <em>form</em>.</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>...
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>    <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Name<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>    <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Page<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>    <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Description<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>    <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Date Added<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>  {% comment %} Berikut cara memperlihatkan data produk di bawah baris ini
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>  {%endcomment %} {% for book in books %}
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>{{book.name}}<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>{{book.page}}<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>{{book.description}}<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>{{book.date_added}}<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>  {% endfor %}
+<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+<a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a>
+<a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a><span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+<a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a>
+<a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{% url &#39;main:create_book&#39; %}&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-12-24" name="__codelineno-12-24" href="#__codelineno-12-24"></a>  <span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>Add New Book<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-12-25" name="__codelineno-12-25" href="#__codelineno-12-25"></a><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<a id="__codelineno-12-26" name="__codelineno-12-26" href="#__codelineno-12-26"></a>{% endblock content %}
+</code></pre></div>
+<ol>
+<li>Jalankan proyek Django-mu dengan perintah <code>python manage.py runserver</code> dan bukalah <a href="http://localhost:8000/">http://localhost:8000/</a> di browser favoritmu. Coba tambahkan beberapa data produk baru dan seharusnya kamu dapat melihat data yang ditambahkan pada halaman utama aplikasi.</li>
+</ol>
+<h2 id="tutorial-mengembalikan-data-dalam-bentuk-xml">Tutorial Mengembalikan Data dalam Bentuk XML</h2>
+<ol>
+<li>Buka <code>views.py</code> yang ada pada folder <code>main</code> dan tambahkan <em>import</em> <code>HttpResponse</code> dan <code>Serializer</code> pada bagian paling atas.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kn">from</span> <span class="nn">django.http</span> <span class="kn">import</span> <span class="n">HttpResponse</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="kn">from</span> <span class="nn">django.core</span> <span class="kn">import</span> <span class="n">serializers</span>
+</code></pre></div>
+<ol>
+<li>Buatlah sebuah fungsi baru yang menerima parameter <em>request</em> dengan nama <code>show_xml</code> dan buatlah sebuah variabel di dalam fungsi tersebut yang menyimpan hasil <em>query</em> dari seluruh data yang ada pada <code>Book</code>.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">def</span> <span class="nf">show_xml</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>    <span class="n">data</span> <span class="o">=</span> <span class="n">Book</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+</code></pre></div>
+<ol>
+<li>Tambahkan <em>return function</em> berupa <code>HttpResponse</code> yang berisi parameter data hasil <em>query</em> yang sudah diserialisasi menjadi XML dan parameter <code>content_type="application/xml"</code>.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">def</span> <span class="nf">show_xml</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>    <span class="n">data</span> <span class="o">=</span> <span class="n">Book</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>    <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="n">serializers</span><span class="o">.</span><span class="n">serialize</span><span class="p">(</span><span class="s2">&quot;xml&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">),</span> <span class="n">content_type</span><span class="o">=</span><span class="s2">&quot;application/xml&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>Penjelasan Kode:</strong></p>
+<p><code>serializers</code> digunakan untuk <em>translate</em> objek model menjadi format lain seperti dalam fungsi ini adalah XML.</p>
+<ol>
+<li>Buka <code>urls.py</code> yang ada pada folder <code>main</code> dan <em>import</em> fungsi yang sudah kamu buat tadi.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kn">from</span> <span class="nn">main.views</span> <span class="kn">import</span> <span class="n">show_main</span><span class="p">,</span> <span class="n">create_book</span><span class="p">,</span> <span class="n">show_xml</span>
+</code></pre></div>
+<ol>
+<li>Tambahkan <em>path url</em> ke dalam <code>urlpatterns</code> untuk mengakses fungsi yang sudah diimpor tadi.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="o">...</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="n">path</span><span class="p">(</span><span class="s1">&#39;xml/&#39;</span><span class="p">,</span> <span class="n">show_xml</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;show_xml&#39;</span><span class="p">),</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="o">...</span>
+</code></pre></div>
+<ol>
+<li>Jalankan proyek Django-mu dengan perintah <code>python manage.py runserver</code> dan bukalah <a href="http://localhost:8000/xml/">http://localhost:8000/xml/</a> di browser favoritmu untuk melihat hasilnya.</li>
+</ol>
+<h2 id="tutorial-mengembalikan-data-dalam-bentuk-json">Tutorial: Mengembalikan Data dalam Bentuk JSON</h2>
+<ol>
+<li>Buka <code>views.py</code> yang ada pada folder <code>main</code> dan buatlah sebuah fungsi baru yang menerima parameter <em>request</em> dengan nama <code>show_json</code> dengan sebuah variabel di dalamnya yang menyimpan hasil <em>query</em> dari seluruh data yang ada pada <code>Book</code>.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">def</span> <span class="nf">show_json</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>    <span class="n">data</span> <span class="o">=</span> <span class="n">Book</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+</code></pre></div>
+<ol>
+<li>Tambahkan <em>return function</em> berupa <code>HttpResponse</code> yang berisi parameter data hasil <em>query</em> yang sudah diserialisasi menjadi JSON dan parameter <code>content_type="application/json"</code>.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">def</span> <span class="nf">show_json</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>    <span class="n">data</span> <span class="o">=</span> <span class="n">Book</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>    <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="n">serializers</span><span class="o">.</span><span class="n">serialize</span><span class="p">(</span><span class="s2">&quot;json&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">),</span> <span class="n">content_type</span><span class="o">=</span><span class="s2">&quot;application/json&quot;</span><span class="p">)</span>
+</code></pre></div>
+<ol>
+<li>Buka <code>urls.py</code> yang ada pada folder <code>main</code> dan <em>import</em> fungsi yang sudah kamu buat tadi.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kn">from</span> <span class="nn">main.views</span> <span class="kn">import</span> <span class="n">show_main</span><span class="p">,</span> <span class="n">create_book</span><span class="p">,</span> <span class="n">show_xml</span><span class="p">,</span> <span class="n">show_json</span>
+</code></pre></div>
+<ol>
+<li>Tambahkan <em>path url</em> ke dalam <code>urlpatterns</code> untuk mengakses fungsi yang sudah diimpor tadi.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="o">...</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="n">path</span><span class="p">(</span><span class="s1">&#39;json/&#39;</span><span class="p">,</span> <span class="n">show_json</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;show_json&#39;</span><span class="p">),</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="o">...</span>
+</code></pre></div>
+<ol>
+<li>Jalankan proyek Django-mu dengan perintah <code>python manage.py runserver</code> dan bukalah <a href="http://localhost:8000/json/">http://localhost:8000/json/</a> (sesuaikan dengan <em>path url</em> yang dibuat) di browser favoritmu untuk melihat hasilnya.</li>
+</ol>
+<h2 id="tutorial-mengembalikan-data-berdasarkan-id-dalam-bentuk-xml-dan-json">Tutorial: Mengembalikan Data Berdasarkan ID dalam Bentuk XML dan JSON</h2>
+<ol>
+<li>
+<p>Buka <code>views.py</code> yang ada pada folder <code>main</code> dan buatlah dua fungsi baru yang menerima parameter <code>_request_</code> dan <code>id</code> dengan nama <code>show_xml_by_id</code> dan <code>show_json_by_id</code>.</p>
+</li>
+<li>
+<p>Buatlah sebuah variabel di dalam fungsi tersebut yang menyimpan hasil <em>query</em> dari data dengan id tertentu yang ada pada <code>Book</code>.</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="n">data</span> <span class="o">=</span> <span class="n">Book</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">pk</span><span class="o">=</span><span class="nb">id</span><span class="p">)</span>
+</code></pre></div>
+<ol>
+<li>
+<p>Tambahkan <em>return function</em> berupa <code>HttpResponse</code> yang berisi parameter data hasil <em>query</em> yang sudah diserialisasi menjadi JSON atau XML dan parameter <code>content_type</code> dengan <em>value</em> <code>"application/xml"</code> (untuk format XML) atau <code>"application/json"</code> (untuk format JSON).</p>
+</li>
+<li>
+<p>XML</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="k">def</span> <span class="nf">show_xml_by_id</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="nb">id</span><span class="p">):</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>    <span class="n">data</span> <span class="o">=</span> <span class="n">Book</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">pk</span><span class="o">=</span><span class="nb">id</span><span class="p">)</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>    <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="n">serializers</span><span class="o">.</span><span class="n">serialize</span><span class="p">(</span><span class="s2">&quot;xml&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">),</span> <span class="n">content_type</span><span class="o">=</span><span class="s2">&quot;application/xml&quot;</span><span class="p">)</span>
+</code></pre></div>
+</li>
+<li>
+<p>JSON</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="k">def</span> <span class="nf">show_json_by_id</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="nb">id</span><span class="p">):</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>    <span class="n">data</span> <span class="o">=</span> <span class="n">Book</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">pk</span><span class="o">=</span><span class="nb">id</span><span class="p">)</span>
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>    <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="n">serializers</span><span class="o">.</span><span class="n">serialize</span><span class="p">(</span><span class="s2">&quot;json&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">),</span> <span class="n">content_type</span><span class="o">=</span><span class="s2">&quot;application/json&quot;</span><span class="p">)</span>
+</code></pre></div>
+</li>
+<li>
+<p>Buka <code>urls.py</code> yang ada pada folder <code>main</code> dan <em>import</em> fungsi yang sudah kamu buat tadi.</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="kn">from</span> <span class="nn">main.views</span> <span class="kn">import</span> <span class="n">show_main</span><span class="p">,</span> <span class="n">create_book</span><span class="p">,</span> <span class="n">show_xml</span><span class="p">,</span> <span class="n">show_json</span><span class="p">,</span> <span class="n">show_xml_by_id</span><span class="p">,</span> <span class="n">show_json_by_id</span>
+</code></pre></div>
+<ol>
+<li>Tambahkan <em>path</em> URL ke dalam <code>urlpatterns</code> untuk mengakses fungsi yang sudah diimpor tadi.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="o">...</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="n">path</span><span class="p">(</span><span class="s1">&#39;xml/&lt;int:id&gt;/&#39;</span><span class="p">,</span> <span class="n">show_xml_by_id</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;show_xml_by_id&#39;</span><span class="p">),</span>
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="n">path</span><span class="p">(</span><span class="s1">&#39;json/&lt;int:id&gt;/&#39;</span><span class="p">,</span> <span class="n">show_json_by_id</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;show_json_by_id&#39;</span><span class="p">),</span>
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="o">...</span>
+</code></pre></div>
+<ol>
+<li>Jalankan proyek Django-mu dengan perintah <code>python manage.py runserver</code> dan bukalah <a href="http://localhost:8000/xml/[id]/">http://localhost:8000/xml/[id]/</a> atau <a href="http://localhost:8000/json/[id]/">http://localhost:8000/json/[id]/</a> di browser favoritmu untuk melihat hasilnya.</li>
+</ol>
+<blockquote>
+<p>Catatan: Sesuaikan <code>[id]</code> pada URL di atas dengan id objek yang ingin dilihat.</p>
+</blockquote>
+<h2 id="tutorial-penggunaan-postman-sebagai-data-viewer">Tutorial: Penggunaan Postman Sebagai <em>Data Viewer</em></h2>
+<ol>
+<li>
+<p>Pastikan server kamu sudah berjalan dengan perintah <code>python manage.py runserver</code>.</p>
+</li>
+<li>
+<p>Buka Postman dan buatlah sebuah <em>request</em> baru dengan <em>method</em> <code>GET</code> dan <em>url</em> <a href="http://localhost:8000/xml/">http://localhost:8000/xml/</a> atau <a href="http://localhost:8000/json/">http://localhost:8000/json/</a> untuk mengetes apakah data terkirimkan dengan baik.</p>
+</li>
+</ol>
+<blockquote>
+<p>Panduan Instalasi Postman dapat dilihat pada <a href="#referensi-tambahan">Laman Resmi Postman</a>.</p>
+</blockquote>
+<p>Contoh:
+   <img alt="Tampilan Halaman Postman" src="https://media.discordapp.net/attachments/1133956580728127550/1206218883782934558/image.png?ex=65db35e0&amp;is=65c8c0e0&amp;hm=cc5e093ce311fa05279428527608c5c6de0d4672a461d61eed29dd192eb17888&amp;=&amp;format=webp&amp;quality=lossless" /></p>
+<ol>
+<li>
+<p>Klik tombol <code>Send</code> untuk mengirimkan <em>request</em> tersebut.</p>
+</li>
+<li>
+<p>Kamu akan melihat hasil <em>response</em> dari <em>request</em> tersebut pada bagian bawah Postman.</p>
+</li>
+</ol>
+<p><img alt="Sent" src="https://media.discordapp.net/attachments/1133956580728127550/1206219165132787752/image.png?ex=65db3623&amp;is=65c8c123&amp;hm=e4ca6ef643d6ae651cd9526b61c1e4455cecd5244096b3ed298d1022ee9f788a&amp;=&amp;format=webp&amp;quality=lossless&amp;width=701&amp;height=543" /></p>
+<ol>
+<li>Kamu juga dapat mengubah <em>url</em> menjadi <a href="http://localhost:8000/xml/[id]">http://localhost:8000/xml/[id]</a> atau <a href="http://localhost:8000/json/[id]">http://localhost:8000/json/[id]</a> untuk mengetes fungsi pengambilan data produk berdasarkan ID.</li>
+</ol>
+<p><img alt="Json By ID" src="https://media.discordapp.net/attachments/1133956580728127550/1206219270007038003/image.png?ex=65db363c&amp;is=65c8c13c&amp;hm=b979c68fb739601dc1cdcc5066f552fa28e9941e082ef8b4b949490bb65de2a1&amp;=&amp;format=webp&amp;quality=lossless&amp;width=698&amp;height=543" /></p>
+<h2 id="penutup">Penutup</h2>
+<ol>
+<li>Setelah menyelesaikan tutorial ini, tampilan halaman web kamu seharusnya terlihat seperti ini.</li>
+</ol>
+<p><img alt="Tampilan Halaman Web" src="https://media.discordapp.net/attachments/1133956580728127550/1206220516117975050/image.png?ex=65db3765&amp;is=65c8c265&amp;hm=f010001a6578077a802d40156be31bec1a6b40705817ffc5c792aed8f20c47b3&amp;=&amp;format=webp&amp;quality=lossless" /></p>
+<ol>
+<li>Pada akhir tutorial ini, struktur direktori lokalmu akan terlihat seperti ini.</li>
+</ol>
+<p><img alt="Struktur Direktori Lokal" src="https://media.discordapp.net/attachments/1133956580728127550/1206222687773401138/image.png?ex=65db396b&amp;is=65c8c46b&amp;hm=e711796985a77120a5beb95165348f0c587e1f13f8becb04650ac18ebd5eb5c9&amp;=&amp;format=webp&amp;quality=lossless&amp;width=184&amp;height=542" /></p>
+<ol>
+<li>
+<p>Sebelum melakukan langkah ini, <strong>pastikan struktur direktori lokal sudah benar</strong>. Selanjutnya, lakukan <code>add</code>, <code>commit</code> dan <code>push</code> untuk memperbarui repositori GitHub.</p>
+</li>
+<li>
+<p>Jalankan perintah berikut untuk melakukan <code>add</code>, <code>commit</code> dan <code>push</code>.</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>git<span class="w"> </span>add<span class="w"> </span>.
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;&lt;pesan_commit&gt;&quot;</span>
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>&lt;branch_utama&gt;
+</code></pre></div>
+<ul>
+<li>Ubah <code>&lt;pesan_commit&gt;</code> sesuai dengan keinginan. Contoh: <code>git commit -m "tutorial 2 selesai"</code>.</li>
+<li>Ubah <code>&lt;branch_utama&gt;</code> sesuai dengan nama branch utamamu. Contoh: <code>git push -u origin main</code> atau <code>git push -u origin master</code>.</li>
+</ul>
+<h2 id="referensi-tambahan">Referensi Tambahan</h2>
+<ul>
+<li><a href="https://learning.postman.com/docs/getting-started/installation/installation-and-updates/#:~:text=Postman%20is%20available%20on%20the,select%20Download%20for%20your%20platform.">How to install Postman</a></li>
+</ul>
+<h2 id="kontributor">Kontributor</h2>
+<ul>
+<li>Muhammad Nabil Mu'afa</li>
+<li>Muhammad Iqbal Dwitama</li>
+</ul>
+<h2 id="credits">Credits</h2>
+<p>Tutorial ini dikembangkan berdasarkan <a href="https://github.com/pbp-fasilkom-ui/ganjil-2024">PBP Ganjil 2024</a> yang ditulis oleh Tim Pengajar Pemrograman Berbasis Platform 2024. Segala tutorial serta instruksi yang dicantumkan pada repositori ini dirancang sedemikian rupa sehingga mahasiswa yang sedang mengambil mata kuliah Pemrograman Berbasis Platform dapat menyelesaikan tutorial saat sesi lab berlangsung.</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Pembaruan terakhir">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">13 Februari 2024 07:24:11</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Dibuat">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">13 Februari 2024 07:24:11</span>
+  </span>
+
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 PBP Fasilkom UI
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.annotate", "navigation.tabs", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Tersalin ke clipboard", "clipboard.copy": "Salin ke clipboard", "search.result.more.one": "1 lagi di halaman ini", "search.result.more.other": "# lagi di halaman ini", "search.result.none": "Tidak ada dokumen yang sesuai", "search.result.one": "1 dokumen ditemukan", "search.result.other": "# dokumen ditemukan", "search.result.placeholder": "Ketik untuk mulai pencarian", "search.result.term.missing": "Tidak ada", "select.version": "Pilih versi"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+    
+  </body>
+</html>
