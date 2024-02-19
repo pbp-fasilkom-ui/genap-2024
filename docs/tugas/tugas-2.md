@@ -16,7 +16,7 @@ Tema besar aplikasi untuk tugas PBP adalah aplikasi *tracker* selain . Pada seme
 - `amount` sebagai jumlah *item* dengan tipe `IntegerField`.
 - `description` sebagai deskripsi *item* dengan tipe `TextField`.
 
-Kamu dipersilakan untuk menambahkan atribut lainnya jika diinginkan, seperti `date`, `d`, `category`. Namun, model aplikasi kamu wajib memiliki ketiga atribut wajib di atas (`name`, `amount`, `description`). Nama dari ketiga atribut di atas dapat disesuaikan lagi dengan kebutuhan aplikasimu.
+Kamu dipersilakan untuk menambahkan atribut lainnya jika diinginkan, seperti `date`, `category`. Namun, model aplikasi kamu wajib memiliki ketiga atribut wajib di atas (`name`, `amount`, `description`). Nama dari ketiga atribut di atas dapat disesuaikan lagi dengan kebutuhan aplikasimu.
 
 Beberapa contoh ide aplikasi pengelolaan yang dapat kamu buat adalah sebagai berikut.
 
