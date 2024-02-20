@@ -13,10 +13,8 @@
       
       
       
-        <link rel="prev" href="../tugas-2/">
+        <link rel="prev" href="../tugas-3/">
       
-      
-        <link rel="next" href="../tugas-4/">
       
       
       <link rel="icon" href="../../assets/img/logo.png">
@@ -24,7 +22,7 @@
     
     
       
-        <title>Tugas 3 - PBP Genap 2023/2024</title>
+        <title>Tugas 4 - PBP Genap 2023/2024</title>
       
     
     
@@ -78,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tugas-3-implementasi-form-dan-data-delivery-pada-django" class="md-skip">
+        <a href="#tugas-4-implementasi-autentikasi-session-dan-cookies-pada-django" class="md-skip">
           Lewati ke isi
         </a>
       
@@ -111,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tugas 3
+              Tugas 4
             
           </span>
         </div>
@@ -589,6 +587,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../tugas-3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tugas 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -605,7 +624,7 @@
           
   
   <span class="md-ellipsis">
-    Tugas 3
+    Tugas 4
   </span>
   
 
@@ -616,7 +635,7 @@
         
   
   <span class="md-ellipsis">
-    Tugas 3
+    Tugas 4
   </span>
   
 
@@ -659,27 +678,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../tugas-4/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Tugas 4
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -751,28 +749,31 @@
                   
 
 
-<h1 id="tugas-3-implementasi-form-dan-data-delivery-pada-django">Tugas 3:  Implementasi Form dan Data Delivery pada Django</h1>
+<h1 id="tugas-4-implementasi-autentikasi-session-dan-cookies-pada-django">Tugas 4: Implementasi Autentikasi, Session, dan Cookies pada Django</h1>
 <p>Pemrograman Berbasis Platform (CSGE602022) — diselenggarakan oleh Fakultas Ilmu Komputer Universitas Indonesia, Semester Genap 2023/2024</p>
 <hr />
 <h2 id="deskripsi-tugas">Deskripsi Tugas</h2>
-<p>Pada tugas ini, kamu akan menjalankan implementasi konsep <em>data delivery</em> serta menerapkan beberapa konsep yang telah dipelajari selama sesi tutorial.</p>
-<p><em>Checklist</em> untuk tugas ini adalah sebagai berikut:</p>
+<p>Pada tugas ini, kamu akan mengimplementasikan konsep <em>authentication</em>, <em>session</em>, <em>cookies</em>, serta menerapkan beberapa konsep yang telah dipelajari selama sesi tutorial.</p>
+<p>Kerjakan <em>checklist</em> untuk tugas ini secara berurutan:</p>
 <ul>
-<li>[ ] Membuat input <code>form</code> untuk menambahkan objek model pada app sebelumnya.</li>
-<li>[ ] Tambahkan 4 fungsi <code>views</code> baru untuk melihat objek yang sudah ditambahkan dalam format XML, JSON, XML <em>by ID</em>, dan JSON <em>by ID</em>.</li>
-<li>[ ] Membuat routing URL untuk masing-masing <code>views</code> yang telah ditambahkan pada poin 2.</li>
-<li>[ ] Menjawab beberapa pertanyaan berikut pada <code>README.md</code> pada <em>root folder</em>.<ul>
-<li>[ ] Apa perbedaan antara form <code>POST</code> dan form <code>GET</code> dalam Django?</li>
-<li>[ ] Apa perbedaan utama antara XML, JSON, dan HTML dalam konteks pengiriman data?</li>
-<li>[ ] Mengapa JSON sering digunakan dalam pertukaran data antara aplikasi web modern?</li>
+<li>[ ] Mengimplementasikan fungsi registrasi, login, dan logout untuk memungkinkan pengguna untuk mengakses aplikasi sebelumnya dengan lancar.</li>
+<li>[ ] Membuat <strong>dua</strong> akun pengguna dengan masing-masing <strong>tiga</strong> <em>dummy data</em> menggunakan model buku yang telah dibuat pada aplikasi sebelumnya untuk setiap akun <strong>di lokal</strong>.</li>
+<li>[ ] Menghubungkan model <code>Item</code> dengan <code>User</code>.</li>
+<li>[ ] Menampilkan detail informasi pengguna yang sedang <em>logged in</em> seperti <em>username</em> dan menerapkan <code>cookies</code> seperti <code>last login</code> pada halaman utama aplikasi.</li>
+<li>
+<p>[ ] Menjawab beberapa pertanyaan berikut pada <code>README.md</code> pada <em>root folder</em> (silakan modifikasi <code>README.md</code> yang telah kamu buat sebelumnya; tambahkan subjudul untuk setiap tugas).</p>
+<ul>
+<li>[ ] Apa itu Django <code>UserCreationForm</code>, dan jelaskan apa kelebihan dan kekurangannya?</li>
+<li>[ ] Apa perbedaan antara autentikasi dan otorisasi dalam konteks Django, dan mengapa keduanya penting?</li>
+<li>[ ] Apa itu <em>cookies</em> dalam konteks aplikasi web, dan bagaimana Django menggunakan <em>cookies</em> untuk mengelola data sesi pengguna?</li>
+<li>[ ] Apakah penggunaan <em>cookies</em> aman secara <em>default</em> dalam pengembangan web, atau apakah ada risiko potensial yang harus diwaspadai?</li>
 <li>[ ] Jelaskan bagaimana cara kamu mengimplementasikan <em>checklist</em> di atas secara <em>step-by-step</em> (bukan hanya sekadar mengikuti tutorial).</li>
-</ul>
-</li>
-<li>[ ] Mengakses keempat URL di poin 2 menggunakan Postman, membuat <em>screenshot</em> dari hasil akses URL pada Postman, dan menambahkannya ke dalam <code>README.md</code>.</li>
 <li>[ ] Melakukan <code>add</code>-<code>commit</code>-<code>push</code> ke GitHub.</li>
 </ul>
+</li>
+</ul>
 <h2 id="tenggat-waktu-pengerjaan">Tenggat Waktu Pengerjaan</h2>
-<p>Tenggat waktu pengerjaan Tugas 3 adalah hari <strong>Rabu, 20 Februari, pukul 12.00 siang</strong>.</p>
+<p>Tenggat waktu pengerjaan Tugas 4 adalah <strong>Selasa, 27 Februari 2023, pukul 12.00 siang</strong>.</p>
 <p>Asisten dosen akan mengecek <em>last commit</em> dari repositori tugas lab, sehingga kamu tidak perlu mengumpulkan tautan repositori ke dalam slot submisi.</p>
 
 
@@ -796,7 +797,7 @@
     <span class="md-icon" title="Pembaruan terakhir">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">13 Februari 2024 17:31:15</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">20 Februari 2024 08:58:18</span>
   </span>
 
     
@@ -806,7 +807,7 @@
     <span class="md-icon" title="Dibuat">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">13 Februari 2024 17:31:15</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">20 Februari 2024 08:58:18</span>
   </span>
 
     
