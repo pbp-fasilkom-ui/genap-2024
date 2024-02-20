@@ -23,6 +23,6 @@ Pada tugas ini, kamu akan menjalankan implementasi konsep *data delivery* serta 
 
 ## Tenggat Waktu Pengerjaan
 
-Tenggat waktu pengerjaan Tugas 3 adalah hari **Rabu, 20 Februari, pukul 12.00 siang**.
+Tenggat waktu pengerjaan Tugas 3 adalah hari **Selasa, 20 Februari, pukul 12.00 siang**.
 
 Asisten dosen akan mengecek *last commit* dari repositori tugas lab, sehingga kamu tidak perlu mengumpulkan tautan repositori ke dalam slot submisi.
