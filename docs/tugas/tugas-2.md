@@ -10,7 +10,7 @@ Pada tugas ini, kamu akan mengimplementasikan konsep *Model-View-Template* serta
 
 ## Tema Aplikasi
 
-Tema besar aplikasi untuk tugas PBP adalah aplikasi *tracker* selain . Pada semester ini, kamu diberikan kebebasan dalam memilih nama dan tema kecil aplikasi, kecuali *book tracker* yang sudah digunakan pada tutorial. Namun, aplikasi dari tugas kamu harus memiliki atribut-atribut berikut pada model aplikasimu.
+Tema besar aplikasi untuk tugas PBP adalah aplikasi *tracker*. Pada semester ini, kamu diberikan kebebasan dalam memilih nama dan tema kecil aplikasi, kecuali *book tracker* yang sudah digunakan pada tutorial. Namun, aplikasi dari tugas kamu harus memiliki atribut-atribut berikut pada model aplikasimu.
 
 - `name` sebagai nama *item* dengan tipe `CharField`.
 - `amount` sebagai jumlah *item* dengan tipe `IntegerField`.
