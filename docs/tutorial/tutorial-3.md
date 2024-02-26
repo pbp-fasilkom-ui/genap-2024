@@ -437,7 +437,7 @@ Sekarang, kita akan melihat penggunaan _cookies_ dengan menambahkan data _last l
 
 8. Jika kamu menggunakan browser Google Chrome, untuk melihat data _cookie_ `last_login`, kamu dapat mengakses fitur _inspect element_ dan membuka bagian _Application/Storage_. Klik bagian _Cookies_ dan kamu dapat melihat data _cookies_ yang tersedia. Selain `last_login`, kamu juga dapat melihat data `sessionid` dan `csrftoken`. Berikut adalah contoh tampilannya.
 
-   ![Gambar Halaman Main beserta Data Cookies](https://cdn.discordapp.com/attachments/1153328604458008677/1208998655781249114/image.png?ex=65e552bd&is=65d2ddbd&hm=922f0e9f1e55617e2e18fcc0fbc1e6d24c938a5a0573acf40ce7acb39cbe39df&)
+   ![Gambar Halaman Main beserta Data Cookies](https://cdn.discordapp.com/attachments/1153328604458008677/1211621162493284352/image.png?ex=65eedd23&is=65dc6823&hm=f835d11071a16d7f7823532afe2a7060760ee78d20112325ee8e5edc15ff8c0c&)
 
 9. Jika kamu melakukan _logout_ dan membuka bagian riwayat _cookie_, _cookie_ yang dibuat sebelumnya akan hilang dan dibuat ulang ketika kamu _login_ kembali.
 
@@ -530,7 +530,7 @@ Setelah kamu menyelesaikan seluruh tutorial di atas, harapannya kamu sekarang le
 
 1. Setelah menyelesaikan tutorial ini, tampilan halaman web kamu seharusnya terlihat seperti ini.
 
-   ![Tampilan Halaman Web](https://cdn.discordapp.com/attachments/1153328604458008677/1209025998998343710/image.png?ex=65e56c34&is=65d2f734&hm=ddaf49257c1cf3f8cdbc32512258942bd64a891ef6b447a54471471b370b6b08&)
+   ![Tampilan Halaman Web](https://cdn.discordapp.com/attachments/1153328604458008677/1211620964589375508/image.png?ex=65eedcf4&is=65dc67f4&hm=c29a718a637172472e41540c277f846c867561809a7f8111288085016a16856b&)
 
 2. Pada akhir tutorial ini, struktur subdirektori `main` pada lokalmu terlihat seperti ini.
 
