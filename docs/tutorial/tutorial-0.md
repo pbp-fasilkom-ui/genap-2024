@@ -40,21 +40,15 @@ Dengan pemahaman dasar mengenai Git dan GitHub, kamu siap untuk melangkah lebih 
 Langkah selanjutnya adalah membuat akun di GitHub, yang akan memungkinkanmu untuk mulai berkolaborasi pada proyek-proyek menggunakan Git.
 
 1. Buka Situs Web GitHub
-
-
-   - Buka peramban web dan akses [GitHub].
+....-.Buka peramban web dan akses [GitHub].
 
 2. Membuat Akun
-
-
-   - Di halaman beranda GitHub, cari tombol **`Sign up`** di pojok kanan atas halaman.
-   - Klik tombol tersebut untuk memulai proses pendaftaran akun.
+....-.Di halaman beranda GitHub, cari tombol **`Sign up`** di pojok kanan atas halaman.
+....-.Klik tombol tersebut untuk memulai proses pendaftaran akun.
 
 3. Isi Formulir Pendaftaran
-
-
-   - Isi formulir pendaftaran dengan informasi yang diperlukan, seperti nama pengguna yang ingin digunakan, alamat _email_ yang valid, dan kata sandi yang aman.
-   - Pastikan kamu menyimpan informasi ini dengan aman untuk masuk ke akunmu di masa mendatang.
+....-.Isi formulir pendaftaran dengan informasi yang diperlukan, seperti nama pengguna yang ingin digunakan, alamat _email_ yang valid, dan kata sandi yang aman.
+....-.Pastikan kamu menyimpan informasi ini dengan aman untuk masuk ke akunmu di masa mendatang.
 
 4. Verifikasi Akun Melalui _Email_
 
