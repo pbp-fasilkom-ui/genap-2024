@@ -51,8 +51,6 @@ plugins:
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
-  - codehilite:
-      use_pygments: False
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences

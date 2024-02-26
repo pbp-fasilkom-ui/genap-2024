@@ -158,39 +158,30 @@ Langkah pertama dalam penggunaan Git adalah melakukan inisiasi repositori di Git
 1. Buka [GitHub] melalui peramban web.
 
 2. Buat Repositori Baru
-
-
-   - Pada halaman beranda GitHub, buat repositori baru dengan nama `my-first-repo`.
-   - Buka halaman repositori yang baru kamu buat. Pastikan untuk mengatur visibilitas proyek sebagai "Public" dan biarkan pengaturan lainnya pada nilai _default_.
+	- Pada halaman beranda GitHub, buat repositori baru dengan nama `my-first-repo`.
+	- Buka halaman repositori yang baru kamu buat. Pastikan untuk mengatur visibilitas proyek sebagai "Public" dan biarkan pengaturan lainnya pada nilai _default_.
 
 3. Tentukan Direktori Lokal
-
-
-   - Pilih direktori lokal di komputermu yang telah diinisiasi dengan Git. Inilah tempat kamu akan menyimpan versi lokal dari proyek.
+	- Pilih direktori lokal di komputermu yang telah diinisiasi dengan Git. Inilah tempat kamu akan menyimpan versi lokal dari proyek.
 
 4. Tambahkan Berkas `README.md`
+	- Buat berkas baru dengan nama `README.md` dalam direktori lokal proyekmu.
+	- Isi berkas `README.md` dengan informasi seperti nama, NPM, dan kelas. Contoh:
+		```md
+		Nama : Pak Bepe
 
+		NPM : 2201234567
 
-   - Buat berkas baru dengan nama `README.md` dalam direktori lokal proyekmu.
-   - Isi berkas `README.md` dengan informasi seperti nama, NPM, dan kelas. Contoh:
-
-     ```md
-     Nama : Pak Bepe
-
-     NPM : 2201234567
-
-     Kelas : PBP A
-     ```
+		Kelas : PBP A
+		```
 
 5. Cek Status dan Lakukan _Tracking_
-
-   - Buka _command prompt_ atau terminal, lalu jalankan `git status` pada direktori yang sudah kamu pilih. Perintah ini akan menampilkan berkas-berkas yang belum di-_track_ (_untracked_).
-   - Gunakan perintah `git add README.md` untuk menandai berkas README.md sebagai berkas yang akan di-_commit_ (_tracked_).
+	- Buka _command prompt_ atau terminal, lalu jalankan `git status` pada direktori yang sudah kamu pilih. Perintah ini akan menampilkan berkas-berkas yang belum di-_track_ (_untracked_).
+	- Gunakan perintah `git add README.md` untuk menandai berkas README.md sebagai berkas yang akan di-_commit_ (_tracked_).
 
 6. _Commit_ Perubahan
-
-   - Jalankan kembali `git status` dan pastikan berkas README.md sudah ditandai sebagai berkas yang akan di-_commit_.
-   - Lanjutkan dengan menjalankan `git commit -m "<KOMENTAR KAMU>"` untuk membuat _commit_ dengan pesan komentar yang sesuai dengan perubahan yang kamu lakukan.
+	- Jalankan kembali `git status` dan pastikan berkas README.md sudah ditandai sebagai berkas yang akan di-_commit_.
+	- Lanjutkan dengan menjalankan `git commit -m "<KOMENTAR KAMU>"` untuk membuat _commit_ dengan pesan komentar yang sesuai dengan perubahan yang kamu lakukan.
 
 **Catatan:**
 
@@ -204,27 +195,23 @@ Langkah pertama dalam penggunaan Git adalah melakukan inisiasi repositori di Git
 Setelah melakukan inisiasi repositori lokal, langkah selanjutnya adalah menghubungkannya dengan repositori di GitHub agar kamu dapat berkolaborasi dan menyimpan perubahan di platform daring tersebut.
 
 1. Buat _Branch_ Utama Baru
-
-   - Di terminal atau _command prompt_, jalankan perintah `git branch -M main` untuk membuat _branch_ utama baru dengan nama "main".
-   - Pastikan huruf "M" pada perintah `-M` ditulis dengan **huruf kapital**.
+	- Di terminal atau _command prompt_, jalankan perintah `git branch -M main` untuk membuat _branch_ utama baru dengan nama "main".
+	- Pastikan huruf "M" pada perintah `-M` ditulis dengan **huruf kapital**.
 
 2. Hubungkan dengan Repositori di GitHub
 
-   - Gunakan perintah `git remote add origin <URL_REPO>` untuk menghubungkan repositori lokal dengan repositori di GitHub.
-   - Gantilah `<URL_REPO>` dengan URL HTTPS repositori yang telah kamu buat di GitHub. Contoh:
-
-     ```bash
-     git remote add origin https://github.com/pakbepe/test.git
-     ```
+	- Gunakan perintah `git remote add origin <URL_REPO>` untuk menghubungkan repositori lokal dengan repositori di GitHub.
+	- Gantilah `<URL_REPO>` dengan URL HTTPS repositori yang telah kamu buat di GitHub. Contoh:
+		```bash
+		git remote add origin https://github.com/pakbepe/test.git
+		```
 
 3. Lakukan Penyimpanan Pertama ke GitHub
-
-   - Terakhir, lakukan penyimpanan pertama ke GitHub dengan menjalankan perintah `git push -u origin main`.
-   - Perintah ini akan mengirimkan semua perubahan yang ada pada _branch_ saat ini (dalam hal ini adalah _branch_ utama) di repositori lokal ke _branch_ main di repositori GitHub.
+	- Terakhir, lakukan penyimpanan pertama ke GitHub dengan menjalankan perintah `git push -u origin main`.
+	- Perintah ini akan mengirimkan semua perubahan yang ada pada _branch_ saat ini (dalam hal ini adalah _branch_ utama) di repositori lokal ke _branch_ main di repositori GitHub.
 
 4. Lakukan Pengecekan Kembali
-
-   - Lakukan _refresh_ pada halaman repositori kamu, seharusnya berkas `README.md` kamu sudah dapat terlihat.
+	- Lakukan _refresh_ pada halaman repositori kamu, seharusnya berkas `README.md` kamu sudah dapat terlihat.
 
 **Catatan:**
 
@@ -238,15 +225,13 @@ Setelah melakukan inisiasi repositori lokal, langkah selanjutnya adalah menghubu
 1. Buka halaman repositori di [GitHub] yang telah kamu buat sebelumnya.
 
 2. Salin URL _Clone_
-
-   - Klik tombol **`Code`** di pojok kanan atas halaman repositori di GitHub.
-   - Pilih opsi HTTPS untuk salin URL _clone_.
+	- Klik tombol **`Code`** di pojok kanan atas halaman repositori di GitHub.
+	- Pilih opsi HTTPS untuk salin URL _clone_.
 
 3. _Clone_ Repositori ke Komputer Lokal
-
-   - Buka terminal atau _command prompt_ di direktori yang **berbeda** dari tempat repositori lokalmu sebelumnya.
-   - Jalankan perintah `git clone <URL_CLONE>` (gantilah URL_CLONE dengan URL yang telah kamu salin).
-   - Perintah ini akan menduplikasi seluruh repositori ke komputer lokalmu.
+	- Buka terminal atau _command prompt_ di direktori yang **berbeda** dari tempat repositori lokalmu sebelumnya.
+	- Jalankan perintah `git clone <URL_CLONE>` (gantilah URL_CLONE dengan URL yang telah kamu salin).
+	- Perintah ini akan menduplikasi seluruh repositori ke komputer lokalmu.
 
 Saat ini, kamu memiliki tiga repositori:
 
@@ -266,27 +251,25 @@ Seperti yang sudah disinggung sebelumnya (Langkah 2), **_push_** adalah proses m
 
 2. Ubah isi berkas `README.md` dengan menambahkan atribut Hobi. Contohnya adalah sebagai berikut.
 
-   ```md
-   Nama : Pak Bepe
+	```md
+	Nama : Pak Bepe
 
-   NPM : 2201234567
+	NPM : 2201234567
 
-   Kelas : PBP A
+	Kelas : PBP A
 
-   Hobi : Tidur
-   ```
+	Hobi : Tidur
+	```
 
 3. Lakukan _Push_ ke Repositori GitHub
-
-   - Buka terminal atau _command prompt_, kemudian masuk ke repositori lokal yang telah kamu ubah.
-   - Jalankan perintah `git status` untuk melihat status perubahan yang dilakukan.
-   - Jalankan `git add README.md` untuk menambahkan perubahan ke dalam tahap yang akan di-_commit_.
-   - Lakukan _commit_ dengan menjalankan perintah `git commit -m "<KOMENTAR KAMU>"` untuk memberikan deskripsi singkat tentang perubahan yang kamu lakukan.
-   - Terakhir, jalankan `git push -u origin <NAMA_BRANCH>` untuk mengirim perubahan ke _branch_ yang dipilih pada repositori GitHub (gantilah "Nama Branch" dengan _target branch_, misalnya `main`).
+	- Buka terminal atau _command prompt_, kemudian masuk ke repositori lokal yang telah kamu ubah.
+	- Jalankan perintah `git status` untuk melihat status perubahan yang dilakukan.
+	- Jalankan `git add README.md` untuk menambahkan perubahan ke dalam tahap yang akan di-_commit_.
+	- Lakukan _commit_ dengan menjalankan perintah `git commit -m "<KOMENTAR KAMU>"` untuk memberikan deskripsi singkat tentang perubahan yang kamu lakukan.
+	- Terakhir, jalankan `git push -u origin <NAMA_BRANCH>` untuk mengirim perubahan ke _branch_ yang dipilih pada repositori GitHub (gantilah "Nama Branch" dengan _target branch_, misalnya `main`).
 
 4. Lakukan Pengecekan Kembali
-
-   - Lakukan _refresh_ halaman kamu, seharusnya berkas `README.md` kamu sudah berubah.
+	- Lakukan _refresh_ halaman kamu, seharusnya berkas `README.md` kamu sudah berubah.
 
 **Catatan**: Jika kamu ingin mengambil **semua** perubahan yang belum di-_stage_ (ditandai untuk dimasukkan dalam commit) **dari seluruh direktori proyek kamu**, jalankan `git add .`.
 
@@ -297,12 +280,10 @@ Seperti yang sudah disinggung sebelumnya (Langkah 2), **_push_** adalah proses m
 1. Buka kembali **repositori lokal yang telah kamu _clone_** sebelumnya di terminal atau _command prompt_.
 
 2. Jalankan Perintah _Pull_
-
-   - Jalankan perintah `git pull origin main` untuk mengambil perubahan terbaru yang ada di repositori GitHub dan menggabungkannya dengan repositori lokalmu.
+	- Jalankan perintah `git pull origin main` untuk mengambil perubahan terbaru yang ada di repositori GitHub dan menggabungkannya dengan repositori lokalmu.
 
 3. Lakukan Pengecekan Kembali
-
-   - Periksa kembali berkas `README.md` di repositori lokal tersebut. Seharusnya berkas `README.md` kamu sudah menampilkan hobi kamu.
+	- Periksa kembali berkas `README.md` di repositori lokal tersebut. Seharusnya berkas `README.md` kamu sudah menampilkan hobi kamu.
 
 **Catatan:**
 
@@ -319,35 +300,33 @@ Pada tahap ini kamu akan mempelajari tentang penggunaan _branch_ dalam Git. Peng
 - Hal ini memungkinkan tim untuk bekerja pada fitur atau perbaikan _bug_ tanpa mengganggu kode yang ada di _branch_ utama.
 
 1. Membuat dan Mengganti _Branch_ Baru
+	- Pada direktori repositori lokal asli (bukan _clone_), jalankan perintah `git checkout -b <NAMA_BRANCH>` di terminal atau _command prompt_ untuk membuat dan beralih ke _branch_ baru. Contoh: `git checkout -b jurusan_branch`
+	- Tambahkan atribut jurusan pada berkas `README.md`. Contoh:
 
-   - Pada direktori repositori lokal asli (bukan _clone_), jalankan perintah `git checkout -b <NAMA_BRANCH>` di terminal atau _command prompt_ untuk membuat dan beralih ke _branch_ baru. Contoh: `git checkout -b jurusan_branch`
-   - Tambahkan atribut jurusan pada berkas `README.md`. Contoh:
+		```md
+		Nama : Pak Bepe
 
-     ```md
-     Nama : Pak Bepe
+		NPM : 2201234567
 
-     NPM : 2201234567
+		Kelas : PBP A
 
-     Kelas : PBP A
+		Hobi : Tidur
 
-     Hobi : Tidur
-
-     Jurusan : Ilmu Sistem Informasi Komputer
-     ```
+		Jurusan : Ilmu Sistem Informasi Komputer
+		```
 
 2. Menyimpan Perubahan dan _Push_ ke GitHub
-
-   - Setelah menambahkan atribut jurusan, simpan berkas tersebut.
-   - Lakukan `add`, `commit`, dan `push` ke GitHub dengan menjalankan perintah yang sudah kamu kuasai sebelumnya.
-   - Jalankan perintah `git push -u origin <NAMA_BRANCH>`. Pastikan untuk mengganti `<NAMA_BRANCH>` sesuai dengan nama branch baru yang telah dibuat.
+	- Setelah menambahkan atribut jurusan, simpan berkas tersebut.
+	- Lakukan `add`, `commit`, dan `push` ke GitHub dengan menjalankan perintah yang sudah kamu kuasai sebelumnya.
+	- Jalankan perintah `git push -u origin <NAMA_BRANCH>`. Pastikan untuk mengganti `<NAMA_BRANCH>` sesuai dengan nama branch baru yang telah dibuat.
 
 3. Menggabungkan _Branch_ Menggunakan _Pull Request_
 
-   - Buka kembali halaman repositori kamu pada GitHub.
-   - Secara otomatis, pop-up dengan tombol **`Compare & pull request`** akan muncul. Jika tidak, alternatifnya adalah dengan menekan tombol **`Pull Request`** dan kemudian memilih opsi **`New pull request`**.
-   - Setelah itu, GitHub akan membandingkan perubahan yang ada di kedua _branch_ yang ingin digabungkan.
-   - Apabila tidak terdapat konflik, tekan tombol **`Merge pull request`** yang akan menggabungkan perubahan dari _branch_ yang ingin digabungkan ke dalam _branch_ utama (`main`).
-   - Dengan melakukan langkah di atas, semua perubahan dari kedua _branch_ akan diintegrasikan ke dalam _branch_ utama, menciptakan kesatuan antara perubahan tersebut.
+	- Buka kembali halaman repositori kamu pada GitHub.
+	- Secara otomatis, pop-up dengan tombol **`Compare & pull request`** akan muncul. Jika tidak, alternatifnya adalah dengan menekan tombol **`Pull Request`** dan kemudian memilih opsi **`New pull request`**.
+	- Setelah itu, GitHub akan membandingkan perubahan yang ada di kedua _branch_ yang ingin digabungkan.
+	- Apabila tidak terdapat konflik, tekan tombol **`Merge pull request`** yang akan menggabungkan perubahan dari _branch_ yang ingin digabungkan ke dalam _branch_ utama (`main`).
+	- Dengan melakukan langkah di atas, semua perubahan dari kedua _branch_ akan diintegrasikan ke dalam _branch_ utama, menciptakan kesatuan antara perubahan tersebut.
 
 **Catatan:**
 
@@ -366,23 +345,23 @@ Pada tahap ini kamu akan mempelajari tentang penggunaan _branch_ dalam Git. Peng
 2. Di dalam direktori tersebut, buka _command prompt_ (Windows) atau _terminal shell_ (Unix).
 3. Buat _virtual environment_ dengan menjalankan perintah berikut.
 
-   ```bash
-   python -m venv env
-   ```
+	```bash
+	python -m venv env
+	```
 
 4. **_Virtual environment_** ini berguna untuk mengisolasi _package_ serta _dependencies_ dari aplikasi agar tidak bertabrakan dengan versi lain yang ada pada komputermu. Kamu dapat mengaktifkan _virtual environment_ dengan perintah berikut.
 
-   - Windows:
+	- Windows:
 
-     ```bash
-     env\Scripts\activate
-     ```
+		```bash
+		env\Scripts\activate
+		```
 
-   - Unix (Mac/Linux):
+	- Unix (Mac/Linux):
 
-     ```bash
-     source env/bin/activate
-     ```
+		```bash
+		source env/bin/activate
+		```
 
 5. _Virtual environment_ akan aktif dan ditandai dengan `(env)` di baris _input_ terminal.
 
@@ -392,54 +371,54 @@ Pada tahap ini kamu akan mempelajari tentang penggunaan _branch_ dalam Git. Peng
 
 1. Di dalam direktori yang sama, buat berkas `requirements.txt` dan tambahkan beberapa _dependencies_.
 
-   ```text
-   django
-   gunicorn
-   whitenoise
-   psycopg2-binary
-   requests
-   urllib3
-   ```
+	```text
+	django
+	gunicorn
+	whitenoise
+	psycopg2-binary
+	requests
+	urllib3
+	```
 
 2. Lakukan instalasi terhadap _dependencies_ yang ada dengan perintah berikut. Jangan lupa jalankan _virtual environment_ terlebih dahulu sebelum menjalankan perintah berikut.
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+	```bash
+	pip install -r requirements.txt
+	```
 
 3. Buat proyek Django bernama `book_tracker` dengan perintah berikut.
 
-   ```bash
-   django-admin startproject book_tracker .
-   ```
+	```bash
+	django-admin startproject book_tracker .
+	```
 
-   > Pastikan karakter `.` tertulis di akhir perintah
+   	> Pastikan karakter `.` tertulis di akhir perintah
 
 ### Langkah 3: Konfigurasi Proyek dan Menjalankan Server
 
 1. Tambahkan `*` pada `ALLOWED_HOSTS` di `settings.py` untuk keperluan _deployment_:
 
-   ```python
-   ...
-   ALLOWED_HOSTS = ["*"]
-   ...
-   ```
+	```python
+	...
+	ALLOWED_HOSTS = ["*"]
+	...
+	```
 
    Dalam konteks _deployment_, `ALLOWED_HOSTS` berfungsi sebagai daftar _host_ yang diizinkan untuk mengakses aplikasi web. Dengan menetapkan nilai `["*"]`, kamu mengizinkan akses dari **semua** _host_, yang akan memungkinkan aplikasi diakses secara luas. Namun, perlu diingat bahwa pengaturan ini harus digunakan dengan bijak dan hanya dalam situasi tertentu, seperti saat melakukan uji coba atau tahap awal pengembangan.
 
 2. Pastikan bahwa berkas `manage.py` ada pada direktori yang aktif pada terminal kamu saat ini. Jalankan _server_ Django dengan perintah:
 
-   - Windows:
+	- Windows:
 
-     ```bash
-     python manage.py runserver
-     ```
+		```bash
+		python manage.py runserver
+		```
 
-   - Unix:
+	- Unix:
 
-     ```bash
-     python3 manage.py runserver
-     ```
+		```bash
+		python3 manage.py runserver
+		```
 
 3. Buka <http://localhost:8000> pada peramban web untuk melihat animasi roket sebagai tanda aplikasi Django kamu berhasil dibuat.
 
@@ -448,11 +427,11 @@ Pada tahap ini kamu akan mempelajari tentang penggunaan _branch_ dalam Git. Peng
 1. Untuk menghentikan _server_, tekan `Ctrl+C` (Windows/Linux) atau `Control+C` (Mac) pada terminal.
 2. Nonaktifkan _virtual environment_ dengan perintah:
 
-   ```bash
-   deactivate
-   ```
+	```bash
+	deactivate
+	```
 
-   Selamat! Kamu telah berhasil membuat aplikasi Django dari awal.
+   	Selamat! Kamu telah berhasil membuat aplikasi Django dari awal.
 
 ## Tutorial: Unggah Proyek ke Repositori GitHub
 
@@ -460,155 +439,155 @@ Pada tahap ini kamu akan mempelajari tentang penggunaan _branch_ dalam Git. Peng
 
 2. Inisiasi direktori lokal `book-tracker` sebagai repositori Git.
 
-   > _Hint: Ingat kembali tahap tutorial sebelumnya_
+	> _Hint: Ingat kembali tahap tutorial sebelumnya_
 
 3. Tambahkan Berkas `.gitignore`
 
-   - Tambahkan berkas `.gitignore` dan isilah berkas tersebut dengan teks berikut.
+   	- Tambahkan berkas `.gitignore` dan isilah berkas tersebut dengan teks berikut.
 
-     ```yaml
-     # Django
-     *.log
-     *.pot
-     *.pyc
-     __pycache__
-     db.sqlite3
-     media
+		```yaml
+		# Django
+		*.log
+		*.pot
+		*.pyc
+		__pycache__
+		db.sqlite3
+		media
 
-     # Backup files
-     *.bak
+		# Backup files
+		*.bak
 
-     # If you are using PyCharm
-     # User-specific stuff
-     .idea/**/workspace.xml
-     .idea/**/tasks.xml
-     .idea/**/usage.statistics.xml
-     .idea/**/dictionaries
-     .idea/**/shelf
+		# If you are using PyCharm
+		# User-specific stuff
+		.idea/**/workspace.xml
+		.idea/**/tasks.xml
+		.idea/**/usage.statistics.xml
+		.idea/**/dictionaries
+		.idea/**/shelf
 
-     # AWS User-specific
-     .idea/**/aws.xml
+		# AWS User-specific
+		.idea/**/aws.xml
 
-     # Generated files
-     .idea/**/contentModel.xml
+		# Generated files
+		.idea/**/contentModel.xml
 
-     # Sensitive or high-churn files
-     .idea/**/dataSources/
-     .idea/**/dataSources.ids
-     .idea/**/dataSources.local.xml
-     .idea/**/sqlDataSources.xml
-     .idea/**/dynamic.xml
-     .idea/**/uiDesigner.xml
-     .idea/**/dbnavigator.xml
+		# Sensitive or high-churn files
+		.idea/**/dataSources/
+		.idea/**/dataSources.ids
+		.idea/**/dataSources.local.xml
+		.idea/**/sqlDataSources.xml
+		.idea/**/dynamic.xml
+		.idea/**/uiDesigner.xml
+		.idea/**/dbnavigator.xml
 
-     # Gradle
-     .idea/**/gradle.xml
-     .idea/**/libraries
+		# Gradle
+		.idea/**/gradle.xml
+		.idea/**/libraries
 
-     # File-based project format
-     *.iws
+		# File-based project format
+		*.iws
 
-     # IntelliJ
-     out/
+		# IntelliJ
+		out/
 
-     # JIRA plugin
-     atlassian-ide-plugin.xml
+		# JIRA plugin
+		atlassian-ide-plugin.xml
 
-     # Python
-     *.py[cod]
-     *$py.class
+		# Python
+		*.py[cod]
+		*$py.class
 
-     # Distribution / packaging
-     .Python build/
-     develop-eggs/
-     dist/
-     downloads/
-     eggs/
-     .eggs/
-     lib/
-     lib64/
-     parts/
-     sdist/
-     var/
-     wheels/
-     *.egg-info/
-     .installed.cfg
-     *.egg
-     *.manifest
-     *.spec
+		# Distribution / packaging
+		.Python build/
+		develop-eggs/
+		dist/
+		downloads/
+		eggs/
+		.eggs/
+		lib/
+		lib64/
+		parts/
+		sdist/
+		var/
+		wheels/
+		*.egg-info/
+		.installed.cfg
+		*.egg
+		*.manifest
+		*.spec
 
-     # Installer logs
-     pip-log.txt
-     pip-delete-this-directory.txt
+		# Installer logs
+		pip-log.txt
+		pip-delete-this-directory.txt
 
-     # Unit test / coverage reports
-     htmlcov/
-     .tox/
-     .coverage
-     .coverage.*
-     .cache
-     .pytest_cache/
-     nosetests.xml
-     coverage.xml
-     *.cover
-     .hypothesis/
+		# Unit test / coverage reports
+		htmlcov/
+		.tox/
+		.coverage
+		.coverage.*
+		.cache
+		.pytest_cache/
+		nosetests.xml
+		coverage.xml
+		*.cover
+		.hypothesis/
 
-     # Jupyter Notebook
-     .ipynb_checkpoints
+		# Jupyter Notebook
+		.ipynb_checkpoints
 
-     # pyenv
-     .python-version
+		# pyenv
+		.python-version
 
-     # celery
-     celerybeat-schedule.*
+		# celery
+		celerybeat-schedule.*
 
-     # SageMath parsed files
-     *.sage.py
+		# SageMath parsed files
+		*.sage.py
 
-     # Environments
-     .env
-     .venv
-     env/
-     venv/
-     ENV/
-     env.bak/
-     venv.bak/
+		# Environments
+		.env
+		.venv
+		env/
+		venv/
+		ENV/
+		env.bak/
+		venv.bak/
 
-     # mkdocs documentation
-     /site
+		# mkdocs documentation
+		/site
 
-     # mypy
-     .mypy_cache/
+		# mypy
+		.mypy_cache/
 
-     # Sublime Text
-     *.tmlanguage.cache
-     *.tmPreferences.cache
-     *.stTheme.cache
-     *.sublime-workspace
-     *.sublime-project
+		# Sublime Text
+		*.tmlanguage.cache
+		*.tmPreferences.cache
+		*.stTheme.cache
+		*.sublime-workspace
+		*.sublime-project
 
-     # sftp configuration file
-     sftp-config.json
+		# sftp configuration file
+		sftp-config.json
 
-     # Package control specific files Package
-     Control.last-run
-     Control.ca-list
-     Control.ca-bundle
-     Control.system-ca-bundle
-     GitHub.sublime-settings
+		# Package control specific files Package
+		Control.last-run
+		Control.ca-list
+		Control.ca-bundle
+		Control.system-ca-bundle
+		GitHub.sublime-settings
 
-     # Visual Studio Code
-     .vscode/*
-     !.vscode/settings.json
-     !.vscode/tasks.json
-     !.vscode/launch.json
-     !.vscode/extensions.json
-     .history
-     ```
+		# Visual Studio Code
+		.vscode/*
+		!.vscode/settings.json
+		!.vscode/tasks.json
+		!.vscode/launch.json
+		!.vscode/extensions.json
+		.history
+		```
 
-   - Berkas `.gitignore` adalah sebuah berkas konfigurasi yang digunakan dalam repositori Git untuk menentukan berkas-berkas dan direktori-direktori yang harus diabaikan oleh Git.
-   - Berkas-berkas yang tercantum di dalam `.gitignore` **tidak** akan dimasukkan ke dalam versi kontrol Git.
-   - Berkas ini perlu dibuat karena terkadang ada berkas-berkas yang tidak perlu dilacak oleh Git, seperti berkas-berkas yang dihasilkan oleh proses kompilasi, berkas sementara, atau berkas konfigurasi pribadi.
+	- Berkas `.gitignore` adalah sebuah berkas konfigurasi yang digunakan dalam repositori Git untuk menentukan berkas-berkas dan direktori-direktori yang harus diabaikan oleh Git.
+	- Berkas-berkas yang tercantum di dalam `.gitignore` **tidak** akan dimasukkan ke dalam versi kontrol Git.
+	- Berkas ini perlu dibuat karena terkadang ada berkas-berkas yang tidak perlu dilacak oleh Git, seperti berkas-berkas yang dihasilkan oleh proses kompilasi, berkas sementara, atau berkas konfigurasi pribadi.
 
 4. Lakukan `add`, `commit`, dan `push` dari direktori repositori lokal.
 
