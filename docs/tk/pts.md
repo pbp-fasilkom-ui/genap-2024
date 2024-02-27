@@ -45,7 +45,7 @@ Selamat mengerjakan. 😄
 5. Memiliki halaman *form* yang dapat menerima masukan dari pengguna kemudian diproses oleh Views. Contoh pemrosesan oleh Views adalah *insert* data ke dalam Models, *query* data dari Models, dan *update* data pada Models.
 6. Menerapkan JavaScript dengan pemanggilan AJAX.
 7. Menerapkan filter informasi bagi pengguna yang sudah *log in* saja. Contohnya adalah data alamat, umur, dan nomor ponsel hanya dapat dilihat oleh pengguna yang sudah *log in* saja.
-8. Menerapkan filter pada *dataset* katalog buku yang ditampilkan. Contohnya adalah menampilkan daftar makanan dan minuman berdasarkan harga.
+8. Menerapkan filter pada *dataset* makanan dan minuman yang ditampilkan. Contohnya adalah menampilkan daftar makanan dan minuman berdasarkan harga.
 
 ## Tahapan Tugas Kelompok
 
@@ -64,7 +64,7 @@ Selamat mengerjakan. 😄
                         <li>Nama-nama anggota kelompok</li>
                         <li>Deskripsi aplikasi (cerita aplikasi yang diajukan serta kebermanfaatannya)</li>
                         <li>Daftar modul yang akan diimplementasikan</li>
-                        <li>Sumber dataset katalog buku</li>
+                        <li>Sumber dataset makanan dan minuman</li>
 						<li><em>Role</em> atau peran pengguna beserta deskripsinya (karena bisa saja lebih dari satu jenis pengguna yang mengakses aplikasi)</li>
                     </ol>
             </ul>
