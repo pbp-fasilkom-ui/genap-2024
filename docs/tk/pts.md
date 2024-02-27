@@ -28,6 +28,7 @@ Selamat mengerjakan. 😄
 3. Setiap kelompok dipersilakan mencari ide sendiri mengenai aplikasi yang akan dibuat. Tema aplikasi adalah makanan dan minuman (*food and beverage*). Tema ini dipilih karena tiga alasan:
 	- Pada Semester Genap 2023/2024, ada momen bulan Ramadan. Biasanya ada banyak acara bukber (buka puasa bersama) pada bulan Ramadan. Acara-acara bukber tersebut dapat menjadi peluang usaha makanan dan minuman.
     - Setelah bulan Ramadan, ada Hari Raya Idulfitri. Perayaan Hari Raya Idulfitri juga dapat menjadi peluang usaha kue kering khas Idulfitri.
+	- Selain momen bulan Ramadan dan Hari Raya Idulfitri, tinggal di lingkungan sekitar kampus juga dapat menjadi peluang usaha katering untuk kegiatan kampus dan untuk mahasiswa yang tidak sempat memasak. 
 4. Setiap kelompok mengimplementasikan *dataset* makanan dan minuman dalam bentuk *class* Models dan menyimpan data dari *dataset* tersebut ke dalam database Django. *Dataset* makanan dan minuman harus berisi minimal 100 makanan dan/atau minuman. Sumber *dataset* makanan dan minuman boleh berasal dari mana saja, misalnya dari Kaggle. Contoh URL *dataset* yang dapat digunakan: 
 	- Indonesia food delivery GoFood product list https://www.kaggle.com/datasets/ariqsyahalam/indonesia-food-delivery-gofood-product-list 
 	- Indonesian Food Recipes https://www.kaggle.com/datasets/canggih/indonesian-food-recipes
