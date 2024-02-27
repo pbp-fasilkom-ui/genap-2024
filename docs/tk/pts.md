@@ -30,9 +30,9 @@ Selamat mengerjakan. 😄
     - Setelah bulan Ramadan, ada Hari Raya Idulfitri. Perayaan Hari Raya Idulfitri juga dapat menjadi peluang usaha kue kering khas Idulfitri.
 	- Selain momen bulan Ramadan dan Hari Raya Idulfitri, tinggal di lingkungan sekitar kampus juga dapat menjadi peluang usaha katering untuk kegiatan kampus dan untuk mahasiswa yang tidak sempat memasak. 
 4. Setiap kelompok mengimplementasikan *dataset* makanan dan minuman dalam bentuk *class* Models dan menyimpan data dari *dataset* tersebut ke dalam database Django. *Dataset* makanan dan minuman harus berisi minimal 100 makanan dan/atau minuman. Sumber *dataset* makanan dan minuman boleh berasal dari mana saja, misalnya dari Kaggle. Contoh URL *dataset* yang dapat digunakan: 
-	- Indonesia food delivery GoFood product list https://www.kaggle.com/datasets/ariqsyahalam/indonesia-food-delivery-gofood-product-list 
-	- Indonesian Food Recipes https://www.kaggle.com/datasets/canggih/indonesian-food-recipes
-	- Indonesian Food and Drink Nutrition Dataset https://www.kaggle.com/datasets/anasfikrihanif/indonesian-food-and-drink-nutrition-dataset 
+	- [Indonesia food delivery GoFood product list](https://www.kaggle.com/datasets/ariqsyahalam/indonesia-food-delivery-gofood-product-list)
+	- [Indonesian Food Recipes](https://www.kaggle.com/datasets/canggih/indonesian-food-recipes)
+	- [Indonesian Food and Drink Nutrition Dataset](https://www.kaggle.com/datasets/anasfikrihanif/indonesian-food-and-drink-nutrition-dataset)
 5. Setiap anggota kelompok mengerjakan modul yang berbeda. Modul ditentukan oleh kelompok yang disesuaikan dengan ide aplikasi yang sudah didiskusikan dalam kelompok.
 6. Tugas kelompok dikumpulkan sebagai kesatuan aplikasi web.
 
