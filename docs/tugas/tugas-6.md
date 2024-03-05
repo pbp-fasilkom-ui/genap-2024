@@ -16,6 +16,7 @@ Pada tugas ini, kamu akan mengimplementasikan AJAX pada aplikasi yang telah kamu
 		- [ ] Lakukan pengambilan task menggunakan AJAX GET.
   	- [ ] AJAX POST
 		- [ ] Buatlah sebuah tombol yang membuka sebuah modal dengan form untuk menambahkan item.
+		
         	> Modal di-*trigger* dengan menekan suatu tombol pada halaman utama. Saat penambahan item berhasil, modal harus ditutup dan input form harus dibersihkan dari data yang sudah dimasukkan ke dalam form sebelumnya.
 
     - [ ] Buatlah fungsi *view* baru untuk menambahkan item baru ke dalam basis data.
