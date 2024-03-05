@@ -332,7 +332,7 @@ Pada bagian ini, kamu akan membuat fungsi pada *views* untuk menambahkan buku ba
 			description = request.POST.get("description")
 			user = request.user
 
-			new_book = Book(name=name, price=price, description=description, user=user)
+			new_book = Book(name=name, page=page, description=description, user=user)
 			new_book.save()
 
 			return HttpResponse(b"CREATED", status=201)
