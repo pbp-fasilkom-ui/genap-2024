@@ -242,7 +242,7 @@ function changeColor(){
 
 ### Pengenalan AJAX
 
-AJAX merupakan singkatan dari ***A**synchronous **J**avaScript **A**nd **X**ML*.
+AJAX merupakan singkatan dari _**A**synchronous **J**avaScript **A**nd **X**ML_.
 
 AJAX bukanlah merupakan sebuah bahasa pemrograman, melainkan sebuah teknologi yang memadukan peramban web (untuk meminta data dari *web server*) dengan JavaScript dan HTML DOM (untuk menampilkan data). AJAX dapat menggunakan XML untuk mengirim data, tetapi AJAX juga dapat menggunakan teks ataupun JSON untuk mengirim data. AJAX memungkinkan halaman web untuk memperbarui data secara asinkronus dengan mengirimkan data ke peladen di balik layar. Hal tersebut berarti bahwa kita dapat memperbarui sebagian elemen data pada halaman tanpa harus me-*reload* halaman secara keseluruhan.
 
@@ -515,11 +515,11 @@ Selamat! Kamu telah menyelesaikan Tutorial 5 mengenai AJAX dengan baik. 😄
 
 1. Setelah menyelesaikan tutorial ini, tampilan halaman web kamu seharusnya terlihat seperti ini.
 
-   ![Tampilan Halaman Web](https://cdn.discordapp.com/attachments/1153328604458008677/1213768191143182396/image.png?ex=65f6acb7&is=65e437b7&hm=943fc28676b09d262a01ea2efa44398e8969d0096f3a60e96338b14c1a13b69e&)
+	![Tampilan Halaman Web](https://cdn.discordapp.com/attachments/1153328604458008677/1213768191143182396/image.png?ex=65f6acb7&is=65e437b7&hm=943fc28676b09d262a01ea2efa44398e8969d0096f3a60e96338b14c1a13b69e&)
 
 2. Kamu juga seharusnya sudah dapat menambahkan buku secara *asynchronous* dengan menggunakan modal AJAX.
 
-    ![Tampilan Modal](https://cdn.discordapp.com/attachments/1153328604458008677/1213768513211072562/image.png?ex=65f6ad04&is=65e43804&hm=9b9418102bad76aab8d45c3081457a2e912498f0611c0f1923cc4823d071bf89&)
+	![Tampilan Modal](https://cdn.discordapp.com/attachments/1153328604458008677/1213768513211072562/image.png?ex=65f6ad04&is=65e43804&hm=9b9418102bad76aab8d45c3081457a2e912498f0611c0f1923cc4823d071bf89&)
 
 3. Lakukan `add`, `commit` dan `push` untuk memperbarui repositori GitHub. Jalankan perintah berikut untuk melakukan `add`, `commit` dan `push`.
 
