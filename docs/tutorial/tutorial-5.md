@@ -341,7 +341,8 @@ Pada bagian ini, kamu akan membuat fungsi pada *views* untuk menambahkan buku ba
     ```
 
     **Penjelasan Kode:**
-    - `name = request.POST.get("name")` berfungsi untuk mengambil *value* `name` pada `request`.
+	
+	- `name = request.POST.get("name")` berfungsi untuk mengambil *value* `name` pada `request`.
     - `new_book` membuat objek Book baru dengan parameter sesuai *values* dari *request*.
 
 ## Tutorial: Menambahkan *Routing* Untuk Fungsi `add_book_ajax`
@@ -376,7 +377,8 @@ Pada bagian ini, kamu akan membuat fungsi pada *views* untuk menambahkan buku ba
     ```
 
     **Penjelasan Kode:**
-    - Fungsi ini menggunakan `fetch()` API ke data JSON secara *asynchronous*.
+    
+	- Fungsi ini menggunakan `fetch()` API ke data JSON secara *asynchronous*.
     - Setelah data di-*fetch*, fungsi `then()` digunakan untuk melakukan *parse* pada data JSON menjadi objek JavaScript.
 
 4. Buatlah fungsi baru pada *block* `<Script>` dengan nama `refreshBooks()` yang digunakan untuk me-*refresh* data buku secara *asynchronous*.
@@ -410,7 +412,8 @@ Pada bagian ini, kamu akan membuat fungsi pada *views* untuk menambahkan buku ba
     ```
 	
     **Penjelasan Kode:**
-    - `document.getElementById("book_table")` digunakan untuk mendapatkan elemen berdasarkan ID nya. Pada baris kode ini, elemen yang dituju adalah tag `<table>` dengan ID `book_table` yang sudah kamu buat pada tahapan sebelumnya.
+    
+	- `document.getElementById("book_table")` digunakan untuk mendapatkan elemen berdasarkan ID nya. Pada baris kode ini, elemen yang dituju adalah tag `<table>` dengan ID `book_table` yang sudah kamu buat pada tahapan sebelumnya.
     - `innerHTML` digunakan untuk mengisi *child element* dari elemen yang dituju. Jika `innerHTML = ""`, maka akan mengosongkan isi *child element* dari elemen yang dituju.
     - `books.forEach((item))` digunakan untuk melakukan *for each loop* pada data *books* yang diambil menggunakan fungsi `getBooks()`. Kemudian, `htmlString` kita konkatenasi dengan data buku untuk mengisi tabel.
     - `refreshBooks()` digunakan untuk memanggil fungsi tersebut pada setiap kali membuka halaman web.
@@ -491,7 +494,8 @@ Modal dengan form yang telah kamu buat sebelumnya belum bisa digunakan untuk men
     ```
 
     **Penjelasan Kode:**
-    - `new FormData(document.querySelector('#form'))` digunakan untuk membuat sebuah FormData baru yang datanya diambil dari form pada modal. Objek FormData dapat digunakan untuk mengirimkan data form tersebut ke server.
+    
+	- `new FormData(document.querySelector('#form'))` digunakan untuk membuat sebuah FormData baru yang datanya diambil dari form pada modal. Objek FormData dapat digunakan untuk mengirimkan data form tersebut ke server.
     - `document.getElementById("form").reset()` digunakan untuk mengosongkan isi *field* form modal setelah di-*submit*.
 
 2. Tambahkan fungsi `onclick` pada *button* "Add Book" pada modal untuk menjalankan fungsi `addBook()` dengan menambahkan kode berikut.
