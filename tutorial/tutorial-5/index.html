@@ -1812,9 +1812,11 @@
 <a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a>
 <a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a>    <span class="k">return</span> <span class="n">HttpResponseNotFound</span><span class="p">()</span>
 </code></pre></div>
-<p><strong>Penjelasan Kode:</strong>
-- <code>name = request.POST.get("name")</code> berfungsi untuk mengambil <em>value</em> <code>name</code> pada <code>request</code>.
-- <code>new_book</code> membuat objek Book baru dengan parameter sesuai <em>values</em> dari <em>request</em>.</p>
+<p><strong>Penjelasan Kode:</strong></p>
+<ul>
+<li><code>name = request.POST.get("name")</code> berfungsi untuk mengambil <em>value</em> <code>name</code> pada <code>request</code>.</li>
+<li><code>new_book</code> membuat objek Book baru dengan parameter sesuai <em>values</em> dari <em>request</em>.</li>
+</ul>
 </li>
 </ol>
 <h2 id="tutorial-menambahkan-routing-untuk-fungsi-add_book_ajax">Tutorial: Menambahkan <em>Routing</em> Untuk Fungsi <code>add_book_ajax</code></h2>
@@ -1847,9 +1849,11 @@
 <a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="o">&lt;</span><span class="err">/script&gt;</span>
 </code></pre></div>
-<p><strong>Penjelasan Kode:</strong>
-- Fungsi ini menggunakan <code>fetch()</code> API ke data JSON secara <em>asynchronous</em>.
-- Setelah data di-<em>fetch</em>, fungsi <code>then()</code> digunakan untuk melakukan <em>parse</em> pada data JSON menjadi objek JavaScript.</p>
+<p><strong>Penjelasan Kode:</strong></p>
+<ul>
+<li>Fungsi ini menggunakan <code>fetch()</code> API ke data JSON secara <em>asynchronous</em>.</li>
+<li>Setelah data di-<em>fetch</em>, fungsi <code>then()</code> digunakan untuk melakukan <em>parse</em> pada data JSON menjadi objek JavaScript.</li>
+</ul>
 </li>
 <li>
 <p>Buatlah fungsi baru pada <em>block</em> <code>&lt;Script&gt;</code> dengan nama <code>refreshBooks()</code> yang digunakan untuk me-<em>refresh</em> data buku secara <em>asynchronous</em>.</p>
@@ -1879,11 +1883,13 @@
 <a id="__codelineno-22-24" name="__codelineno-22-24" href="#__codelineno-22-24"></a><span class="w">    </span><span class="nx">refreshBooks</span><span class="p">()</span>
 <a id="__codelineno-22-25" name="__codelineno-22-25" href="#__codelineno-22-25"></a><span class="o">&lt;</span><span class="err">/script&gt;</span>
 </code></pre></div>
-<p><strong>Penjelasan Kode:</strong>
-- <code>document.getElementById("book_table")</code> digunakan untuk mendapatkan elemen berdasarkan ID nya. Pada baris kode ini, elemen yang dituju adalah tag <code>&lt;table&gt;</code> dengan ID <code>book_table</code> yang sudah kamu buat pada tahapan sebelumnya.
-- <code>innerHTML</code> digunakan untuk mengisi <em>child element</em> dari elemen yang dituju. Jika <code>innerHTML = ""</code>, maka akan mengosongkan isi <em>child element</em> dari elemen yang dituju.
-- <code>books.forEach((item))</code> digunakan untuk melakukan <em>for each loop</em> pada data <em>books</em> yang diambil menggunakan fungsi <code>getBooks()</code>. Kemudian, <code>htmlString</code> kita konkatenasi dengan data buku untuk mengisi tabel.
-- <code>refreshBooks()</code> digunakan untuk memanggil fungsi tersebut pada setiap kali membuka halaman web.</p>
+<p><strong>Penjelasan Kode:</strong></p>
+<ul>
+<li><code>document.getElementById("book_table")</code> digunakan untuk mendapatkan elemen berdasarkan ID nya. Pada baris kode ini, elemen yang dituju adalah tag <code>&lt;table&gt;</code> dengan ID <code>book_table</code> yang sudah kamu buat pada tahapan sebelumnya.</li>
+<li><code>innerHTML</code> digunakan untuk mengisi <em>child element</em> dari elemen yang dituju. Jika <code>innerHTML = ""</code>, maka akan mengosongkan isi <em>child element</em> dari elemen yang dituju.</li>
+<li><code>books.forEach((item))</code> digunakan untuk melakukan <em>for each loop</em> pada data <em>books</em> yang diambil menggunakan fungsi <code>getBooks()</code>. Kemudian, <code>htmlString</code> kita konkatenasi dengan data buku untuk mengisi tabel.</li>
+<li><code>refreshBooks()</code> digunakan untuk memanggil fungsi tersebut pada setiap kali membuka halaman web.</li>
+</ul>
 </li>
 </ol>
 <h2 id="tutorial-membuat-modal-sebagai-form-untuk-menambahkan-buku">Tutorial: Membuat Modal Sebagai <em>Form</em> untuk Menambahkan Buku</h2>
@@ -1957,9 +1963,11 @@
 <a id="__codelineno-25-11" name="__codelineno-25-11" href="#__codelineno-25-11"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-25-12" name="__codelineno-25-12" href="#__codelineno-25-12"></a><span class="o">&lt;</span><span class="err">/script&gt;</span>
 </code></pre></div>
-<p><strong>Penjelasan Kode:</strong>
-- <code>new FormData(document.querySelector('#form'))</code> digunakan untuk membuat sebuah FormData baru yang datanya diambil dari form pada modal. Objek FormData dapat digunakan untuk mengirimkan data form tersebut ke server.
-- <code>document.getElementById("form").reset()</code> digunakan untuk mengosongkan isi <em>field</em> form modal setelah di-<em>submit</em>.</p>
+<p><strong>Penjelasan Kode:</strong></p>
+<ul>
+<li><code>new FormData(document.querySelector('#form'))</code> digunakan untuk membuat sebuah FormData baru yang datanya diambil dari form pada modal. Objek FormData dapat digunakan untuk mengirimkan data form tersebut ke server.</li>
+<li><code>document.getElementById("form").reset()</code> digunakan untuk mengosongkan isi <em>field</em> form modal setelah di-<em>submit</em>.</li>
+</ul>
 </li>
 <li>
 <p>Tambahkan fungsi <code>onclick</code> pada <em>button</em> "Add Book" pada modal untuk menjalankan fungsi <code>addBook()</code> dengan menambahkan kode berikut.</p>
@@ -2029,7 +2037,7 @@
     <span class="md-icon" title="Pembaruan terakhir">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">5 Maret 2024 08:24:28</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">5 Maret 2024 08:25:28</span>
   </span>
 
     
