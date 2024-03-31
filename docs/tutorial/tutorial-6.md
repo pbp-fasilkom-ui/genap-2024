@@ -95,7 +95,7 @@ Keuntungan dari Flutter sendiri adalah kemampuannya untuk menciptakan aplikasi u
 
 Sebelum menyelam ke Flutter lebih lanjut, kamu akan merapikan struktur file pada proyek kamu terlebih dahulu agar kode proyek dapat lebih mudah dipahami. Hal ini merupakan bentuk penerapan _best practice_ dalam pengembangan aplikasi, yakni [_clean architecture_](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html).
 
-1. Buatlah file baru bernama `menu.dart` pada direktori `shopping_list/lib`. Pada baris pertama file tersebut, tambahkan kode di bawah ini.
+1. Buatlah file baru bernama `menu.dart` pada direktori `book_tracker/lib`. Pada baris pertama file tersebut, tambahkan kode di bawah ini.
 
    ```dart
    import 'package:flutter/material.dart';
@@ -124,7 +124,7 @@ Sebelum menyelam ke Flutter lebih lanjut, kamu akan merapikan struktur file pada
    Hal ini terjadi karena file `main.dart` tidak lagi mengenali class MyHomePage yang sudah kamu pindahkan ke file lain, yaitu `menu.dart`. Untuk menyelesaikan masalah ini, tambahkan kode berikut ini pada awal file `main.dart`.
 
    ```dart
-   import 'package:shopping_list/menu.dart';
+   import 'package:book_tracker/menu.dart';
    ```
 
 4. Jalankan proyek melalui Terminal atau Command Prompt dengan perintah `flutter run` untuk memastikan bahwa aplikasi tetap dapat berjalan dengan baik.
