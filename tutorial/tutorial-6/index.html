@@ -1116,25 +1116,27 @@
 <p>Keuntungan dari Flutter sendiri adalah kemampuannya untuk menciptakan aplikasi untuk berbagai <em>platform</em> dengan hanya satu <em>codebase</em>. Selain itu, fitur JIT (<em>just in time</em>) memungkinkan pengembang aplikasi untuk melihat perubahan yang dilakukan pada <em>codebase</em> secara langsung tanpa harus mengulang proses kompilasi kode aplikasi dari awal.</p>
 <h2 id="instalasi-flutter">Instalasi Flutter</h2>
 <ol>
-<li>Akses salah satu dari tautan berikut sesuai dengan sistem operasi yang kamu gunakan.</li>
-</ol>
+<li>
+<p>Akses salah satu dari tautan berikut sesuai dengan sistem operasi yang kamu gunakan.</p>
 <p>a. <a href="https://docs.flutter.dev/get-started/install/macos">Mac OS</a></p>
 <p>Khusus pengguna Mac OS yang menggunakan Homebrew, kamu dapat menggunakan perintah <code>brew install --cask flutter</code> untuk menginstal Flutter.</p>
 <p>b. <a href="https://docs.flutter.dev/get-started/install/windows">Windows</a></p>
 <p>c. <a href="https://docs.flutter.dev/get-started/install/linux">Linux</a></p>
-<ol>
-<li>Instal Flutter versi terkini (<em>latest version</em>) dengan mengikuti panduan pada tautan di atas.</li>
-</ol>
+</li>
+<li>
+<p>Instal Flutter versi terkini (<em>latest version</em>) dengan mengikuti panduan pada tautan di atas.</p>
 <p>Untuk pengguna Mac, silakan lewati tahap <code>iOS Setup</code> dan langsung ke tahap <code>Android Setup</code>.</p>
-<ol>
-<li>Instal IDE pilihan kamu yang akan digunakan untuk mengembangkan aplikasi Flutter.</li>
-</ol>
+</li>
+<li>
+<p>Instal IDE pilihan kamu yang akan digunakan untuk mengembangkan aplikasi Flutter.</p>
 <p>a. <a href="https://developer.android.com/studio">Android Studio (Recommended)</a></p>
 <p>b. <a href="https://code.visualstudio.com/">Visual Studio Code</a></p>
 <blockquote>
 <p>Kamu dapat menggunakan Visual Studio Code untuk Flutter dengan menginstall ekstensi <a href="https://marketplace.visualstudio.com/items?itemName=Dart-Code.dart-code">Dart</a> dan <a href="https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter">Flutter</a>.</p>
 <p>Kamu juga dapat membaca fungsionalitas IDE yang disediakan oleh ekstensi Flutter pada tautan yang tersedia.</p>
 </blockquote>
+</li>
+</ol>
 <h2 id="tutorial-getting-started-with-flutter">Tutorial: <em>Getting Started with Flutter</em></h2>
 <ol>
 <li>
@@ -1145,17 +1147,15 @@
 </li>
 <li>
 <p><em>Generate</em> proyek Flutter baru dengan nama <strong>book_tracker</strong>, kemudian masuk ke dalam direktori proyek tersebut.</p>
-</li>
-</ol>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>flutter<span class="w"> </span>create<span class="w"> </span>book_tracker
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">cd</span><span class="w"> </span>book_tracker
 </code></pre></div>
 <blockquote>
 <p>Untuk membuat proyek lain, kamu dapat mengganti <code>book_tracker</code> sesuai dengan nama proyek yang kamu inginkan.</p>
 </blockquote>
-<ol>
-<li>Jalankan proyek melalui Terminal atau Command Prompt menggunakan perintah berikut.</li>
-</ol>
+</li>
+<li>
+<p>Jalankan proyek melalui Terminal atau Command Prompt menggunakan perintah berikut.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>flutter<span class="w"> </span>run
 </code></pre></div>
 <p>Untuk pengguna macOS, terdapat beberapa opsi untuk menjalankan aplikasi <em>flutter</em>, namun yang termudah adalah:</p>
@@ -1163,7 +1163,7 @@
 <li>Menggunakan <a href="https://docs.flutter.dev/get-started/install/macos#set-up-the-android-emulator"><em>emulator</em> pada Android Studio</a></li>
 <li>
 <p>Menggunakan Google Chrome</p>
-</li>
+<ul>
 <li>
 <p>Jalankan perintah di bawah untuk <em>enable web support</em> (hanya perlu dilakukan sekali):</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>flutter<span class="w"> </span>config<span class="w"> </span>--enable-web
@@ -1174,25 +1174,29 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>flutter<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>chrome
 </code></pre></div>
 </li>
-<li>
-<p>Akan muncul tampilan seperti di bawah ini.</p>
+</ul>
 </li>
 </ol>
+</li>
+<li>
+<p>Akan muncul tampilan seperti di bawah ini.</p>
 <p><img alt="First App" src="https://docs.flutter.dev/assets/images/docs/get-started/ios/starter-app.png" /></p>
-<ol>
-<li>Jalankan perintah <code>git init</code> pada <em>root folder</em> untuk menginisiasi proyek sebagai repositori Git, kemudian <code>add</code>-<code>commit</code>-<code>push</code> proyek ke sebuah repositori baru di GitHub. Kamu dapat menamai repositori barumu dengan nama <code>book-tracker-mobile</code>.</li>
+</li>
+<li>
+<p>Jalankan perintah <code>git init</code> pada <em>root folder</em> untuk menginisiasi proyek sebagai repositori Git, kemudian <code>add</code>-<code>commit</code>-<code>push</code> proyek ke sebuah repositori baru di GitHub. Kamu dapat menamai repositori barumu dengan nama <code>book-tracker-mobile</code>.</p>
+</li>
 </ol>
 <hr />
 <h2 id="tutorial-merapikan-struktur-proyek">Tutorial: Merapikan Struktur Proyek</h2>
 <p>Sebelum menyelam ke Flutter lebih lanjut, kamu akan merapikan struktur file pada proyek kamu terlebih dahulu agar kode proyek dapat lebih mudah dipahami. Hal ini merupakan bentuk penerapan <em>best practice</em> dalam pengembangan aplikasi, yakni <a href="https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html"><em>clean architecture</em></a>.</p>
 <ol>
-<li>Buatlah file baru bernama <code>menu.dart</code> pada direktori <code>book_tracker/lib</code>. Pada baris pertama file tersebut, tambahkan kode di bawah ini.</li>
-</ol>
+<li>
+<p>Buatlah file baru bernama <code>menu.dart</code> pada direktori <code>book_tracker/lib</code>. Pada baris pertama file tersebut, tambahkan kode di bawah ini.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">import</span><span class="w"> </span><span class="s1">&#39;package:flutter/material.dart&#39;</span><span class="p">;</span>
 </code></pre></div>
-<ol>
-<li>Dari file <code>main.dart</code>, pindahkan (<em>cut</em>) kode baris ke-39 hingga akhir yang berisi kedua class di bawah ini:</li>
-</ol>
+</li>
+<li>
+<p>Dari file <code>main.dart</code>, pindahkan (<em>cut</em>) kode baris ke-39 hingga akhir yang berisi kedua class di bawah ini:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">MyHomePage</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="p">...</span>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="p">}</span>
@@ -1202,16 +1206,18 @@
 <a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="p">}</span>
 </code></pre></div>
 <p>ke file <code>menu.dart</code> yang baru saja kamu buat.</p>
-<ol>
-<li>Kamu akan melihat bahwa pada file <code>main.dart</code>, akan terdapat error pada baris ke-34, yang berisi kode berikut:</li>
-</ol>
+</li>
+<li>
+<p>Kamu akan melihat bahwa pada file <code>main.dart</code>, akan terdapat error pada baris ke-34, yang berisi kode berikut:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nl">home:</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">MyHomePage</span><span class="p">(</span><span class="nl">title:</span><span class="w"> </span><span class="s1">&#39;Flutter Demo Home Page&#39;</span><span class="p">),</span>
 </code></pre></div>
 <p>Hal ini terjadi karena file <code>main.dart</code> tidak lagi mengenali class MyHomePage yang sudah kamu pindahkan ke file lain, yaitu <code>menu.dart</code>. Untuk menyelesaikan masalah ini, tambahkan kode berikut ini pada awal file <code>main.dart</code>.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">import</span><span class="w"> </span><span class="s1">&#39;package:book_tracker/menu.dart&#39;</span><span class="p">;</span>
 </code></pre></div>
-<ol>
-<li>Jalankan proyek melalui Terminal atau Command Prompt dengan perintah <code>flutter run</code> untuk memastikan bahwa aplikasi tetap dapat berjalan dengan baik.</li>
+</li>
+<li>
+<p>Jalankan proyek melalui Terminal atau Command Prompt dengan perintah <code>flutter run</code> untuk memastikan bahwa aplikasi tetap dapat berjalan dengan baik.</p>
+</li>
 </ol>
 <h2 id="tutorial-membuat-widget-sederhana-pada-flutter">Tutorial: Membuat Widget Sederhana pada Flutter</h2>
 <p>Dalam bagian ini, kamu akan mempelajari cara membuat widget sederhana di Flutter. Kamu akan membuat nama dari <em>tracker</em> kamu sebagai <em>header</em> dan membuat <em>card</em> sebagai <em>button</em> untuk fitur-fitur aplikasi kamu. Saat <em>button</em> yang ada ditekan, akan keluar pemberitahuan di bagian bawah layar.</p>
@@ -1222,34 +1228,30 @@
 </li>
 <li>
 <p>Ubah kode pada <code>main.dart</code> di bagian tema aplikasi kamu yang mempunyai tipe <code>MaterialApp</code> menjadi seperti di bawah ini.</p>
-</li>
-</ol>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nl">colorScheme:</span><span class="w"> </span><span class="n">ColorScheme</span><span class="p">.</span><span class="n">fromSeed</span><span class="p">(</span><span class="nl">seedColor:</span><span class="w"> </span><span class="n">Colors</span><span class="p">.</span><span class="n">indigo</span><span class="p">),</span>
 </code></pre></div>
-<ol>
-<li>Coba jalankan kembali proyek kamu untuk melihat apakah warna tema aplikasi sudah berubah menjadi indigo.</li>
-</ol>
+</li>
+<li>
+<p>Coba jalankan kembali proyek kamu untuk melihat apakah warna tema aplikasi sudah berubah menjadi indigo.</p>
 <blockquote>
 <p>Kamu juga bisa mengubah warna tema aplikasi sesuai yang kamu inginkan dengan mengacu kepada <a href="https://api.flutter.dev/flutter/material/Colors-class.html">dokumentasi <code>Colors</code></a>.</p>
 </blockquote>
 <p>Setelah mengubah warna tema aplikasi, kamu akan mengubah sifat <em>widget</em> halaman menu menjadi <em>stateless</em>.</p>
-<ol>
-<li>Pada file <code>main.dart</code>, hapus <code>const MyHomePage(title: 'Flutter Demo Home Page')</code> sehingga cukup menjadi:</li>
-</ol>
+</li>
+<li>
+<p>Pada file <code>main.dart</code>, hapus <code>const MyHomePage(title: 'Flutter Demo Home Page')</code> sehingga cukup menjadi:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">MyHomePage</span><span class="p">()</span>
 </code></pre></div>
 <p>saja. Jangan lupa untuk menghapus kata kunci <code>const</code>-nya juga.</p>
-<ol>
+</li>
 <li>
 <p>Pada file <code>menu.dart</code>, kamu akan mengubah sifat <em>widget</em> halaman dari <em>stateful</em> menjadi <em>stateless</em> dengan:</p>
-</li>
-<li>
-<p>Mengubah <code>...extends StatefulWidget</code> menjadi <code>...extends StatelessWidget</code> dan menghapus kata kunci <code>const</code> pada baris yang sama</p>
-</li>
+<ul>
+<li>Mengubah <code>...extends StatefulWidget</code> menjadi <code>...extends StatelessWidget</code> dan menghapus kata kunci <code>const</code> pada baris yang sama</li>
 <li>Mengubah bagian <code>({super.key, required this.title})</code> menjadi <code>({Key? key}) : super(key: key);</code></li>
 <li>Menghapus variabel <code>final String title;</code>, komentar-komentar pada file, dan seluruh class <code>class _MyHomePageState extends State&lt;MyHomePage&gt;</code></li>
 <li>Menambahkan Widget build sehingga kode terlihat seperti di bawah.</li>
-</ol>
+</ul>
 <p>Setelah melakukan langkah-langkah tersebut, seharusnya file <code>menu.dart</code> kamu terlihat seperti ini.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>class MyHomePage extends StatelessWidget {
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    MyHomePage({Key? key}) : super(key: key);
@@ -1262,15 +1264,17 @@
 <a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>    }
 <a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>}
 </code></pre></div>
+</li>
+</ol>
 <p>Setelah mengubah sifat widget halaman menu menjadi stateless, kamu akan menambahkan teks dan card sebagai tombol, salah satunya untuk memperlihatkan buku yang sedang kamu <em>track</em>.</p>
 <ol>
-<li>Untuk menambahkan teks dan card, kamu dapat memulai dengan mendefinisikan tipe item untuk masing-masing card pada file <code>menu.dart</code>. Letakkan kode di bawah ini di luar class <code>MyHomePage</code> yang sudah ada.</li>
-</ol>
+<li>
+<p>Untuk menambahkan teks dan card, kamu dapat memulai dengan mendefinisikan tipe item untuk masing-masing card pada file <code>menu.dart</code>. Letakkan kode di bawah ini di luar class <code>MyHomePage</code> yang sudah ada.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">TrackerItem</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">  </span><span class="kd">final</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">  </span><span class="kd">final</span><span class="w"> </span><span class="n">IconData</span><span class="w"> </span><span class="n">icon</span><span class="p">;</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="kd">final</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="kd">final</span><span class="w"> </span><span class="n">IconData</span><span class="w"> </span><span class="n">icon</span><span class="p">;</span>
 <a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
-<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">  </span><span class="n">TrackerItem</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">icon</span><span class="p">);</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">    </span><span class="n">TrackerItem</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">icon</span><span class="p">);</span>
 <a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="p">}</span>
 </code></pre></div>
 <p>Setelah itu, kamu dapat menambahkan list berisi tombol-tombol yang ingin kamu tambahkan beserta icon yang ingin digunakan di bawah kode <code>MyHomePage({Key? key}) : super(key: key);</code>.</p>
@@ -1280,37 +1284,37 @@
 <a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">    </span><span class="n">TrackerItem</span><span class="p">(</span><span class="s2">&quot;Logout&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Icons</span><span class="p">.</span><span class="n">logout</span><span class="p">),</span>
 <a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="p">];</span>
 </code></pre></div>
-<ol>
-<li>Selanjutnya, ubah nilai yang di-<code>return</code> oleh widget <code>build</code> menjadi kode di bawah ini.</li>
-</ol>
+</li>
+<li>
+<p>Selanjutnya, ubah nilai yang di-<code>return</code> oleh widget <code>build</code> menjadi kode di bawah ini.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="p">...</span>
 <a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="k">return</span><span class="w"> </span><span class="n">Scaffold</span><span class="p">(</span>
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">      </span><span class="nl">appBar:</span><span class="w"> </span><span class="n">AppBar</span><span class="p">(</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">        </span><span class="nl">appBar:</span><span class="w"> </span><span class="n">AppBar</span><span class="p">(</span>
 <a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">        </span><span class="nl">title:</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Text</span><span class="p">(</span>
-<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">          </span><span class="s1">&#39;Book Tracker&#39;</span><span class="p">,</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">            </span><span class="s1">&#39;Book Tracker&#39;</span><span class="p">,</span>
 <a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">        </span><span class="p">),</span>
-<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">      </span><span class="p">),</span>
-<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">      </span><span class="nl">body:</span><span class="w"> </span><span class="n">SingleChildScrollView</span><span class="p">(</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">        </span><span class="p">),</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">        </span><span class="nl">body:</span><span class="w"> </span><span class="n">SingleChildScrollView</span><span class="p">(</span>
 <a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="w">        </span><span class="c1">// Widget wrapper yang dapat discroll</span>
 <a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="w">        </span><span class="nl">child:</span><span class="w"> </span><span class="n">Padding</span><span class="p">(</span>
-<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="w">          </span><span class="nl">padding:</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">EdgeInsets</span><span class="p">.</span><span class="n">all</span><span class="p">(</span><span class="m">10.0</span><span class="p">),</span><span class="w"> </span><span class="c1">// Set padding dari halaman</span>
-<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="w">          </span><span class="nl">child:</span><span class="w"> </span><span class="n">Column</span><span class="p">(</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="w">            </span><span class="nl">padding:</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">EdgeInsets</span><span class="p">.</span><span class="n">all</span><span class="p">(</span><span class="m">10.0</span><span class="p">),</span><span class="w"> </span><span class="c1">// Set padding dari halaman</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="w">            </span><span class="nl">child:</span><span class="w"> </span><span class="n">Column</span><span class="p">(</span>
 <a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="w">            </span><span class="c1">// Widget untuk menampilkan children secara vertikal</span>
 <a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="w">            </span><span class="nl">children:</span><span class="w"> </span><span class="o">&lt;</span><span class="n">Widget</span><span class="o">&gt;</span><span class="p">[</span>
-<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a><span class="w">              </span><span class="k">const</span><span class="w"> </span><span class="n">Padding</span><span class="p">(</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a><span class="w">                </span><span class="k">const</span><span class="w"> </span><span class="n">Padding</span><span class="p">(</span>
 <a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a><span class="w">                </span><span class="nl">padding:</span><span class="w"> </span><span class="n">EdgeInsets</span><span class="p">.</span><span class="n">only</span><span class="p">(</span><span class="nl">top:</span><span class="w"> </span><span class="m">10.0</span><span class="p">,</span><span class="w"> </span><span class="nl">bottom:</span><span class="w"> </span><span class="m">10.0</span><span class="p">),</span>
 <a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a><span class="w">                </span><span class="c1">// Widget Text untuk menampilkan tulisan dengan alignment center dan style yang sesuai</span>
 <a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a><span class="w">                </span><span class="nl">child:</span><span class="w"> </span><span class="n">Text</span><span class="p">(</span>
-<a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a><span class="w">                  </span><span class="s1">&#39;PBP</span><span class="se">\&#39;</span><span class="s1">s Tracker&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Text yang menandakan tracker</span>
-<a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a><span class="w">                  </span><span class="nl">textAlign:</span><span class="w"> </span><span class="n">TextAlign</span><span class="p">.</span><span class="n">center</span><span class="p">,</span>
-<a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a><span class="w">                  </span><span class="nl">style:</span><span class="w"> </span><span class="n">TextStyle</span><span class="p">(</span>
+<a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a><span class="w">                    </span><span class="s1">&#39;PBP</span><span class="se">\&#39;</span><span class="s1">s Tracker&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Text yang menandakan tracker</span>
+<a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a><span class="w">                    </span><span class="nl">textAlign:</span><span class="w"> </span><span class="n">TextAlign</span><span class="p">.</span><span class="n">center</span><span class="p">,</span>
+<a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a><span class="w">                    </span><span class="nl">style:</span><span class="w"> </span><span class="n">TextStyle</span><span class="p">(</span>
 <a id="__codelineno-13-22" name="__codelineno-13-22" href="#__codelineno-13-22"></a><span class="w">                    </span><span class="nl">fontSize:</span><span class="w"> </span><span class="m">30</span><span class="p">,</span>
 <a id="__codelineno-13-23" name="__codelineno-13-23" href="#__codelineno-13-23"></a><span class="w">                    </span><span class="nl">fontWeight:</span><span class="w"> </span><span class="n">FontWeight</span><span class="p">.</span><span class="n">bold</span><span class="p">,</span>
-<a id="__codelineno-13-24" name="__codelineno-13-24" href="#__codelineno-13-24"></a><span class="w">                  </span><span class="p">),</span>
+<a id="__codelineno-13-24" name="__codelineno-13-24" href="#__codelineno-13-24"></a><span class="w">                    </span><span class="p">),</span>
 <a id="__codelineno-13-25" name="__codelineno-13-25" href="#__codelineno-13-25"></a><span class="w">                </span><span class="p">),</span>
-<a id="__codelineno-13-26" name="__codelineno-13-26" href="#__codelineno-13-26"></a><span class="w">              </span><span class="p">),</span>
-<a id="__codelineno-13-27" name="__codelineno-13-27" href="#__codelineno-13-27"></a><span class="w">              </span><span class="c1">// Grid layout</span>
-<a id="__codelineno-13-28" name="__codelineno-13-28" href="#__codelineno-13-28"></a><span class="w">              </span><span class="n">GridView</span><span class="p">.</span><span class="n">count</span><span class="p">(</span>
+<a id="__codelineno-13-26" name="__codelineno-13-26" href="#__codelineno-13-26"></a><span class="w">                </span><span class="p">),</span>
+<a id="__codelineno-13-27" name="__codelineno-13-27" href="#__codelineno-13-27"></a><span class="w">                </span><span class="c1">// Grid layout</span>
+<a id="__codelineno-13-28" name="__codelineno-13-28" href="#__codelineno-13-28"></a><span class="w">                </span><span class="n">GridView</span><span class="p">.</span><span class="n">count</span><span class="p">(</span>
 <a id="__codelineno-13-29" name="__codelineno-13-29" href="#__codelineno-13-29"></a><span class="w">                </span><span class="c1">// Container pada card kita.</span>
 <a id="__codelineno-13-30" name="__codelineno-13-30" href="#__codelineno-13-30"></a><span class="w">                </span><span class="nl">primary:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
 <a id="__codelineno-13-31" name="__codelineno-13-31" href="#__codelineno-13-31"></a><span class="w">                </span><span class="nl">padding:</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">EdgeInsets</span><span class="p">.</span><span class="n">all</span><span class="p">(</span><span class="m">20</span><span class="p">),</span>
@@ -1319,64 +1323,66 @@
 <a id="__codelineno-13-34" name="__codelineno-13-34" href="#__codelineno-13-34"></a><span class="w">                </span><span class="nl">crossAxisCount:</span><span class="w"> </span><span class="m">3</span><span class="p">,</span>
 <a id="__codelineno-13-35" name="__codelineno-13-35" href="#__codelineno-13-35"></a><span class="w">                </span><span class="nl">shrinkWrap:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
 <a id="__codelineno-13-36" name="__codelineno-13-36" href="#__codelineno-13-36"></a><span class="w">                </span><span class="nl">children:</span><span class="w"> </span><span class="n">items</span><span class="p">.</span><span class="n">map</span><span class="p">((</span><span class="n">TrackerItem</span><span class="w"> </span><span class="n">item</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-13-37" name="__codelineno-13-37" href="#__codelineno-13-37"></a><span class="w">                  </span><span class="c1">// Iterasi untuk setiap item</span>
-<a id="__codelineno-13-38" name="__codelineno-13-38" href="#__codelineno-13-38"></a><span class="w">                  </span><span class="k">return</span><span class="w"> </span><span class="n">TrackerCard</span><span class="p">(</span><span class="n">item</span><span class="p">);</span>
+<a id="__codelineno-13-37" name="__codelineno-13-37" href="#__codelineno-13-37"></a><span class="w">                    </span><span class="c1">// Iterasi untuk setiap item</span>
+<a id="__codelineno-13-38" name="__codelineno-13-38" href="#__codelineno-13-38"></a><span class="w">                    </span><span class="k">return</span><span class="w"> </span><span class="n">TrackerCard</span><span class="p">(</span><span class="n">item</span><span class="p">);</span>
 <a id="__codelineno-13-39" name="__codelineno-13-39" href="#__codelineno-13-39"></a><span class="w">                </span><span class="p">}).</span><span class="n">toList</span><span class="p">(),</span>
-<a id="__codelineno-13-40" name="__codelineno-13-40" href="#__codelineno-13-40"></a><span class="w">              </span><span class="p">),</span>
+<a id="__codelineno-13-40" name="__codelineno-13-40" href="#__codelineno-13-40"></a><span class="w">                </span><span class="p">),</span>
 <a id="__codelineno-13-41" name="__codelineno-13-41" href="#__codelineno-13-41"></a><span class="w">            </span><span class="p">],</span>
-<a id="__codelineno-13-42" name="__codelineno-13-42" href="#__codelineno-13-42"></a><span class="w">          </span><span class="p">),</span>
+<a id="__codelineno-13-42" name="__codelineno-13-42" href="#__codelineno-13-42"></a><span class="w">            </span><span class="p">),</span>
 <a id="__codelineno-13-43" name="__codelineno-13-43" href="#__codelineno-13-43"></a><span class="w">        </span><span class="p">),</span>
-<a id="__codelineno-13-44" name="__codelineno-13-44" href="#__codelineno-13-44"></a><span class="w">      </span><span class="p">),</span>
+<a id="__codelineno-13-44" name="__codelineno-13-44" href="#__codelineno-13-44"></a><span class="w">        </span><span class="p">),</span>
 <a id="__codelineno-13-45" name="__codelineno-13-45" href="#__codelineno-13-45"></a><span class="w">    </span><span class="p">);</span>
 </code></pre></div>
-<ol>
-<li>Walaupun sebelumnya terdapat error, kamu tidak perlu khawatir. Kamu hanya perlu membuat <em>widget stateless</em> baru untuk menampilkan <em>card</em>. Tambahkan class di bawah ini (masih di file yang sama) di luar class-class yang sudah ada.</li>
-</ol>
+</li>
+<li>
+<p>Walaupun sebelumnya terdapat error, kamu tidak perlu khawatir. Kamu hanya perlu membuat <em>widget stateless</em> baru untuk menampilkan <em>card</em>. Tambahkan class di bawah ini (masih di file yang sama) di luar class-class yang sudah ada.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">TrackerCard</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">StatelessWidget</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">  </span><span class="kd">final</span><span class="w"> </span><span class="n">TrackerItem</span><span class="w"> </span><span class="n">item</span><span class="p">;</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">    </span><span class="kd">final</span><span class="w"> </span><span class="n">TrackerItem</span><span class="w"> </span><span class="n">item</span><span class="p">;</span>
 <a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>
-<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">TrackerCard</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">item</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="k">super</span><span class="p">.</span><span class="n">key</span><span class="p">});</span><span class="w"> </span><span class="c1">// Constructor</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">TrackerCard</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">item</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="k">super</span><span class="p">.</span><span class="n">key</span><span class="p">});</span><span class="w"> </span><span class="c1">// Constructor</span>
 <a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>
-<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">  </span><span class="nd">@override</span>
-<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="w">  </span><span class="n">Widget</span><span class="w"> </span><span class="n">build</span><span class="p">(</span><span class="n">BuildContext</span><span class="w"> </span><span class="n">context</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">    </span><span class="nd">@override</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="w">    </span><span class="n">Widget</span><span class="w"> </span><span class="n">build</span><span class="p">(</span><span class="n">BuildContext</span><span class="w"> </span><span class="n">context</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">Material</span><span class="p">(</span>
-<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="w">      </span><span class="nl">color:</span><span class="w"> </span><span class="n">Colors</span><span class="p">.</span><span class="n">indigo</span><span class="p">,</span>
-<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="w">      </span><span class="nl">child:</span><span class="w"> </span><span class="n">InkWell</span><span class="p">(</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="w">        </span><span class="nl">color:</span><span class="w"> </span><span class="n">Colors</span><span class="p">.</span><span class="n">indigo</span><span class="p">,</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="w">        </span><span class="nl">child:</span><span class="w"> </span><span class="n">InkWell</span><span class="p">(</span>
 <a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="w">        </span><span class="c1">// Area responsive terhadap sentuhan</span>
 <a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="w">        </span><span class="nl">onTap:</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="w">          </span><span class="c1">// Memunculkan SnackBar ketika diklik</span>
-<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="w">          </span><span class="n">ScaffoldMessenger</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="w">            </span><span class="c1">// Memunculkan SnackBar ketika diklik</span>
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="w">            </span><span class="n">ScaffoldMessenger</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
 <a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a><span class="w">            </span><span class="p">..</span><span class="n">hideCurrentSnackBar</span><span class="p">()</span>
 <a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a><span class="w">            </span><span class="p">..</span><span class="n">showSnackBar</span><span class="p">(</span><span class="n">SnackBar</span><span class="p">(</span>
 <a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a><span class="w">                </span><span class="nl">content:</span><span class="w"> </span><span class="n">Text</span><span class="p">(</span><span class="s2">&quot;Kamu telah menekan tombol </span><span class="si">${</span><span class="n">item</span><span class="p">.</span><span class="n">name</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)));</span>
 <a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a><span class="w">        </span><span class="p">},</span>
 <a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a><span class="w">        </span><span class="nl">child:</span><span class="w"> </span><span class="n">Container</span><span class="p">(</span>
-<a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a><span class="w">          </span><span class="c1">// Container untuk menyimpan Icon dan Text</span>
-<a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a><span class="w">          </span><span class="nl">padding:</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">EdgeInsets</span><span class="p">.</span><span class="n">all</span><span class="p">(</span><span class="m">8</span><span class="p">),</span>
-<a id="__codelineno-14-22" name="__codelineno-14-22" href="#__codelineno-14-22"></a><span class="w">          </span><span class="nl">child:</span><span class="w"> </span><span class="n">Center</span><span class="p">(</span>
+<a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a><span class="w">            </span><span class="c1">// Container untuk menyimpan Icon dan Text</span>
+<a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a><span class="w">            </span><span class="nl">padding:</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">EdgeInsets</span><span class="p">.</span><span class="n">all</span><span class="p">(</span><span class="m">8</span><span class="p">),</span>
+<a id="__codelineno-14-22" name="__codelineno-14-22" href="#__codelineno-14-22"></a><span class="w">            </span><span class="nl">child:</span><span class="w"> </span><span class="n">Center</span><span class="p">(</span>
 <a id="__codelineno-14-23" name="__codelineno-14-23" href="#__codelineno-14-23"></a><span class="w">            </span><span class="nl">child:</span><span class="w"> </span><span class="n">Column</span><span class="p">(</span>
-<a id="__codelineno-14-24" name="__codelineno-14-24" href="#__codelineno-14-24"></a><span class="w">              </span><span class="nl">mainAxisAlignment:</span><span class="w"> </span><span class="n">MainAxisAlignment</span><span class="p">.</span><span class="n">center</span><span class="p">,</span>
-<a id="__codelineno-14-25" name="__codelineno-14-25" href="#__codelineno-14-25"></a><span class="w">              </span><span class="nl">children:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-14-24" name="__codelineno-14-24" href="#__codelineno-14-24"></a><span class="w">                </span><span class="nl">mainAxisAlignment:</span><span class="w"> </span><span class="n">MainAxisAlignment</span><span class="p">.</span><span class="n">center</span><span class="p">,</span>
+<a id="__codelineno-14-25" name="__codelineno-14-25" href="#__codelineno-14-25"></a><span class="w">                </span><span class="nl">children:</span><span class="w"> </span><span class="p">[</span>
 <a id="__codelineno-14-26" name="__codelineno-14-26" href="#__codelineno-14-26"></a><span class="w">                </span><span class="n">Icon</span><span class="p">(</span>
-<a id="__codelineno-14-27" name="__codelineno-14-27" href="#__codelineno-14-27"></a><span class="w">                  </span><span class="n">item</span><span class="p">.</span><span class="n">icon</span><span class="p">,</span>
-<a id="__codelineno-14-28" name="__codelineno-14-28" href="#__codelineno-14-28"></a><span class="w">                  </span><span class="nl">color:</span><span class="w"> </span><span class="n">Colors</span><span class="p">.</span><span class="n">white</span><span class="p">,</span>
-<a id="__codelineno-14-29" name="__codelineno-14-29" href="#__codelineno-14-29"></a><span class="w">                  </span><span class="nl">size:</span><span class="w"> </span><span class="m">30.0</span><span class="p">,</span>
+<a id="__codelineno-14-27" name="__codelineno-14-27" href="#__codelineno-14-27"></a><span class="w">                    </span><span class="n">item</span><span class="p">.</span><span class="n">icon</span><span class="p">,</span>
+<a id="__codelineno-14-28" name="__codelineno-14-28" href="#__codelineno-14-28"></a><span class="w">                    </span><span class="nl">color:</span><span class="w"> </span><span class="n">Colors</span><span class="p">.</span><span class="n">white</span><span class="p">,</span>
+<a id="__codelineno-14-29" name="__codelineno-14-29" href="#__codelineno-14-29"></a><span class="w">                    </span><span class="nl">size:</span><span class="w"> </span><span class="m">30.0</span><span class="p">,</span>
 <a id="__codelineno-14-30" name="__codelineno-14-30" href="#__codelineno-14-30"></a><span class="w">                </span><span class="p">),</span>
 <a id="__codelineno-14-31" name="__codelineno-14-31" href="#__codelineno-14-31"></a><span class="w">                </span><span class="k">const</span><span class="w"> </span><span class="n">Padding</span><span class="p">(</span><span class="nl">padding:</span><span class="w"> </span><span class="n">EdgeInsets</span><span class="p">.</span><span class="n">all</span><span class="p">(</span><span class="m">3</span><span class="p">)),</span>
 <a id="__codelineno-14-32" name="__codelineno-14-32" href="#__codelineno-14-32"></a><span class="w">                </span><span class="n">Text</span><span class="p">(</span>
-<a id="__codelineno-14-33" name="__codelineno-14-33" href="#__codelineno-14-33"></a><span class="w">                  </span><span class="n">item</span><span class="p">.</span><span class="n">name</span><span class="p">,</span>
-<a id="__codelineno-14-34" name="__codelineno-14-34" href="#__codelineno-14-34"></a><span class="w">                  </span><span class="nl">textAlign:</span><span class="w"> </span><span class="n">TextAlign</span><span class="p">.</span><span class="n">center</span><span class="p">,</span>
-<a id="__codelineno-14-35" name="__codelineno-14-35" href="#__codelineno-14-35"></a><span class="w">                  </span><span class="nl">style:</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">TextStyle</span><span class="p">(</span><span class="nl">color:</span><span class="w"> </span><span class="n">Colors</span><span class="p">.</span><span class="n">white</span><span class="p">),</span>
+<a id="__codelineno-14-33" name="__codelineno-14-33" href="#__codelineno-14-33"></a><span class="w">                    </span><span class="n">item</span><span class="p">.</span><span class="n">name</span><span class="p">,</span>
+<a id="__codelineno-14-34" name="__codelineno-14-34" href="#__codelineno-14-34"></a><span class="w">                    </span><span class="nl">textAlign:</span><span class="w"> </span><span class="n">TextAlign</span><span class="p">.</span><span class="n">center</span><span class="p">,</span>
+<a id="__codelineno-14-35" name="__codelineno-14-35" href="#__codelineno-14-35"></a><span class="w">                    </span><span class="nl">style:</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">TextStyle</span><span class="p">(</span><span class="nl">color:</span><span class="w"> </span><span class="n">Colors</span><span class="p">.</span><span class="n">white</span><span class="p">),</span>
 <a id="__codelineno-14-36" name="__codelineno-14-36" href="#__codelineno-14-36"></a><span class="w">                </span><span class="p">),</span>
-<a id="__codelineno-14-37" name="__codelineno-14-37" href="#__codelineno-14-37"></a><span class="w">              </span><span class="p">],</span>
+<a id="__codelineno-14-37" name="__codelineno-14-37" href="#__codelineno-14-37"></a><span class="w">                </span><span class="p">],</span>
 <a id="__codelineno-14-38" name="__codelineno-14-38" href="#__codelineno-14-38"></a><span class="w">            </span><span class="p">),</span>
-<a id="__codelineno-14-39" name="__codelineno-14-39" href="#__codelineno-14-39"></a><span class="w">          </span><span class="p">),</span>
+<a id="__codelineno-14-39" name="__codelineno-14-39" href="#__codelineno-14-39"></a><span class="w">            </span><span class="p">),</span>
 <a id="__codelineno-14-40" name="__codelineno-14-40" href="#__codelineno-14-40"></a><span class="w">        </span><span class="p">),</span>
-<a id="__codelineno-14-41" name="__codelineno-14-41" href="#__codelineno-14-41"></a><span class="w">      </span><span class="p">),</span>
+<a id="__codelineno-14-41" name="__codelineno-14-41" href="#__codelineno-14-41"></a><span class="w">        </span><span class="p">),</span>
 <a id="__codelineno-14-42" name="__codelineno-14-42" href="#__codelineno-14-42"></a><span class="w">    </span><span class="p">);</span>
-<a id="__codelineno-14-43" name="__codelineno-14-43" href="#__codelineno-14-43"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-14-43" name="__codelineno-14-43" href="#__codelineno-14-43"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-14-44" name="__codelineno-14-44" href="#__codelineno-14-44"></a><span class="p">}</span>
 </code></pre></div>
+</li>
+</ol>
 <p>Sebagai bentuk <em>best practice</em>, jalankan perintah <code>flutter analyze</code> pada <em>root folder</em> proyek setelah kode kamu selesai ditulis. Hal ini sebaiknya dilakukan untuk memastikan tidak ada isu-isu pada kode kamu yang dapat mengganggu performa atau fungsionalitas aplikasi. Jika kamu mengikuti tutorial dengan baik, seharusnya hasil perintah menunjukkan bahwa tidak ada isu terdeteksi pada proyek kamu.</p>
 <p><img alt="Hasil menjalankan perintah flutter analyze" src="../../static/img/flutter_analyze.png" /></p>
 <p>Apabila ternyata terdapat isu pada kode kamu (contohnya pada gambar di bawah), cobalah untuk menyelesaikan isu tersebut dengan mengikuti tutorial secara lebih teliti atau memperhatikan baris kode di mana isu tersebut terjadi.</p>
@@ -1392,8 +1398,6 @@
 </li>
 <li>
 <p>Lakukan <code>add</code>, <code>commit</code> dan <code>push</code> untuk memperbarui repositori GitHub.</p>
-</li>
-</ol>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>git<span class="w"> </span>add<span class="w"> </span>.
 <a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;&lt;pesan_commit&gt;&quot;</span>
 <a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>&lt;branch_utama&gt;
@@ -1402,6 +1406,8 @@
 <li>Ubah <code>&lt;pesan_commit&gt;</code> sesuai dengan keinginan. Contoh: <code>git commit -m "tutorial 6 selesai"</code>.</li>
 <li>Ubah <code>&lt;branch_utama&gt;</code> sesuai dengan nama branch utamamu. Contoh: <code>git push -u origin main</code> atau <code>git push -u origin master</code>.</li>
 </ul>
+</li>
+</ol>
 <h2 id="referensi-tambahan">Referensi Tambahan</h2>
 <ul>
 <li><a href="https://https://docs.flutter.dev/">Flutter Docs</a></li>
@@ -1439,7 +1445,7 @@
     <span class="md-icon" title="Pembaruan terakhir">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">31 Maret 2024 21:34:05</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">1 April 2024 08:10:40</span>
   </span>
 
     
