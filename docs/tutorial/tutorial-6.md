@@ -159,7 +159,7 @@ Pertama-tama, kamu bisa mengubah tema warna aplikasi menjadi indigo dengan melak
 
 2. Pada file `menu.dart`, kamu akan mengubah sifat _widget_ halaman dari _stateful_ menjadi _stateless_ dengan:
 
-	- Mengubah `...extends StatefulWidget` menjadi `...extends StatelessWidget` dan menghapus kata kunci `const` pada baris yang sama
+	- Mengubah `...extends StatefulWidget` menjadi `...extends StatelessWidget` dan menghapus kata kunci `const` pada baris bawahnya (constructor)
 	- Mengubah bagian `({super.key, required this.title})` menjadi `({Key? key}) : super(key: key);`
 	- Menghapus variabel `final String title;`, komentar-komentar pada file, dan seluruh class `class _MyHomePageState extends State<MyHomePage>`
 	- Menambahkan Widget build sehingga kode terlihat seperti di bawah.
