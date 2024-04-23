@@ -248,7 +248,7 @@ Ikuti langkah-langkah berikut untuk melakukan integrasi sistem autentikasi pada 
                 "status": False,
                 "message": "Login gagal, periksa kembali email atau kata sandi."
             }, status=401)
-   ```
+   	```
 
 8. Buat _file_ `urls.py` pada folder `authentication` dan tambahkan URL _routing_ terhadap fungsi yang sudah dibuat dengan _endpoint_ `login/`.
 
@@ -275,58 +275,58 @@ Ikuti langkah-langkah berikut untuk melakukan integrasi sistem autentikasi pada 
 
 1. Instal _package_ yang telah disediakan oleh tim asisten dosen dengan menjalankan perintah berikut di Terminal. Jalankan pada direktori _root_ dari proyek Flutter kamu.
 
-   ```bash
-   flutter pub add provider
-   flutter pub add pbp_django_auth
-   ```
+	```bash
+	flutter pub add provider
+	flutter pub add pbp_django_auth
+	```
 
 2. Untuk menggunakan _package_ tersebut, kamu perlu memodifikasi _root widget_ untuk menyediakan `CookieRequest` _library_ ke semua _child widgets_ dengan menggunakan `Provider`.
 
-    Sebagai contoh, jika aplikasimu sebelumnya seperti ini:
+	Sebagai contoh, jika aplikasimu sebelumnya seperti ini:
 
-    ```dart
-    class MyApp extends StatelessWidget {
-        const MyApp({Key? key}) : super(key: key);
+	```dart
+	class MyApp extends StatelessWidget {
+		const MyApp({Key? key}) : super(key: key);
 
-        @override
-        Widget build(BuildContext context) {
-            return MaterialApp(
-                title: 'Flutter App',
-                theme: ThemeData(
-                    colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo),
-         			useMaterial3: true,
-   			    ),
-                home: MyHomePage(),
-            );
-        }
-    }
-    ```
+		@override
+		Widget build(BuildContext context) {
+			return MaterialApp(
+				title: 'Flutter App',
+				theme: ThemeData(
+					colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo),
+					useMaterial3: true,
+				),
+				home: MyHomePage(),
+			);
+		}
+	}
+	```
 
     Ubahlah menjadi:
 
-    ```dart
-    class MyApp extends StatelessWidget {
-        const MyApp({Key? key}) : super(key: key);
+	```dart
+	class MyApp extends StatelessWidget {
+		const MyApp({Key? key}) : super(key: key);
 
-        @override
-        Widget build(BuildContext context) {
-            return Provider(
-                create: (_) {
-                    CookieRequest request = CookieRequest();
-                    return request;
-                },
-                child: MaterialApp(
-                    title: 'Flutter App',
-                    theme: ThemeData(
-                        colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo),
-         				useMaterial3: true,
-                    ),
-                    home: MyHomePage(),
-                ),
-            );
-        }
-    }
-    ```
+		@override
+		Widget build(BuildContext context) {
+			return Provider(
+				create: (_) {
+					CookieRequest request = CookieRequest();
+					return request;
+				},
+				child: MaterialApp(
+					title: 'Flutter App',
+					theme: ThemeData(
+						colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo),
+						useMaterial3: true,
+					),
+					home: MyHomePage(),
+				),
+			);
+		}
+	}
+	```
 
     Hal ini akan membuat objek `Provider` baru yang akan membagikan _instance_ `CookieRequest` dengan semua komponen yang ada di aplikasi.
 
@@ -838,14 +838,14 @@ Selamat! Kamu telah menyelesaikan Tutorial 8! Semoga dengan tutorial ini, kalian
 
 2. Lakukan `add`, `commit` dan `push` untuk memperbarui repositori GitHub.
 
-   ```shell
-   git add .
-   git commit -m "<pesan_commit>"
-   git push -u origin <branch_utama>
-   ```
+	```shell
+	git add .
+	git commit -m "<pesan_commit>"
+	git push -u origin <branch_utama>
+	```
 
-   - Ubah `<pesan_commit>` sesuai dengan keinginan. Contoh: `git commit -m "tutorial 7 selesai"`.
-   - Ubah `<branch_utama>` sesuai dengan nama branch utamamu. Contoh: `git push -u origin main` atau `git push -u origin master`.
+	- Ubah `<pesan_commit>` sesuai dengan keinginan. Contoh: `git commit -m "tutorial 7 selesai"`.
+	- Ubah `<branch_utama>` sesuai dengan nama branch utamamu. Contoh: `git push -u origin main` atau `git push -u origin master`.
 
 ## Referensi Tambahan
 
