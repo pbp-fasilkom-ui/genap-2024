@@ -388,7 +388,7 @@ Sampai sini, kamu sudah melakukan pengaturan dasar untuk pengesahan aplikasi. Se
               name: "v${{ steps.version.outputs.version }}"
               token: ${{ secrets.GH_TOKEN }}
               tag: ${{ steps.version.outputs.version }}
-   ```
+    ```
 
 5. Simpan ketiga file tersebut dan _push_ ke repositori. Cek apakah aplikasi berhasil dibuat dan dirilis oleh GitHub Actions secara otomatis.
 
