@@ -20,7 +20,6 @@
     - Daftar modul yang diimplementasikan beserta pembagian kerja per anggota
     - Peran atau aktor pengguna aplikasi
     - Alur pengintegrasian dengan _web service_ untuk terhubung dengan aplikasi web yang sudah dibuat saat Proyek Tengah Semester
-    - Tautan berita acara
 3. _Deployment_ aplikasi:
     - Unggah APK sebagai Release di GitHub kelompok
     - Platform Cloud, misalnya Microsoft App Center atau Firebase App Distribution
@@ -53,7 +52,6 @@
                     <li>Daftar modul yang diimplementasikan beserta pembagian kerja per anggota</li>
                     <li>Peran atau aktor pengguna aplikasi</li>
                     <li>Alur pengintegrasian dengan <em>web service</em> untuk terhubung dengan aplikasi web yang sudah dibuat saat Proyek Tengah Semester</li>
-                    <li>Menambahkan tautan berita acara ke README.md</li>
                 </ol>
             </ul>
         </td>
