@@ -14,17 +14,17 @@
 
 1. Satu kelompok membuat satu repositori GitHub yang digunakan oleh seluruh anggota kelompok untuk bekerja sama. Kumpulkan tautan repositori GitHub ke Scele.
 2. Repositori GitHub memuat `README.md` yang berisi:
-   - Daftar nama anggota kelompok
-   - Tautan APK (Tidak harus ada pada saat Tahap I; tautan APK dapat ditambahkan belakangan ke `README.md` setelah selesai mengerjakan Tahap II.)
-   - Deskripsi aplikasi (nama dan fungsi aplikasi)
-   - Daftar modul yang diimplementasikan beserta pembagian kerja per anggota
-   - Peran atau aktor pengguna aplikasi
-   - Alur pengintegrasian dengan _web service_ untuk terhubung dengan aplikasi web yang sudah dibuat saat Proyek Tengah Semester
-   - Tautan berita acara
+    - Daftar nama anggota kelompok
+    - Tautan APK (Tidak harus ada pada saat Tahap I; tautan APK dapat ditambahkan belakangan ke `README.md` setelah selesai mengerjakan Tahap II.)
+    - Deskripsi aplikasi (nama dan fungsi aplikasi)
+    - Daftar modul yang diimplementasikan beserta pembagian kerja per anggota
+    - Peran atau aktor pengguna aplikasi
+    - Alur pengintegrasian dengan _web service_ untuk terhubung dengan aplikasi web yang sudah dibuat saat Proyek Tengah Semester
+    - Tautan berita acara
 3. _Deployment_ aplikasi:
-   - Unggah APK sebagai Release di GitHub kelompok
-   - Platform Cloud, misalnya Microsoft App Center atau Firebase App Distribution
-   - Gunakan logo aplikasi kelompok Anda sendiri
+    - Unggah APK sebagai Release di GitHub kelompok
+    - Platform Cloud, misalnya Microsoft App Center atau Firebase App Distribution
+    - Gunakan logo aplikasi kelompok Anda sendiri
 
 ## Aturan Khusus per Anggota Kelompok (Implementasi Sebuah Modul)
 
